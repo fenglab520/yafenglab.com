@@ -32,8 +32,8 @@ education:
       year: 
 
 social:
-  - icon:
-    icon_pack: 
+  - icon: envelope
+    icon_pack: fas
     link: 'mailto:yunhwang@ntu.edu.tw'
   #- icon: twitter
   #  icon_pack: fab
