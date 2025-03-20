@@ -14,7 +14,7 @@ authors:
 superuser: true
 
 # Bio 
-role: Research Assistant
+role: 
 
 # Organizations/Affiliations
 organizations:
