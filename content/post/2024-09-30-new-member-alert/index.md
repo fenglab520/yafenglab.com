@@ -7,4 +7,4 @@ authors:
 ---
 Aaron Chang and Wen-Lan Chen have joined the lab as research assistants. Welcome aboard!
 <!--more-->
-![image](new_member.png)
+
