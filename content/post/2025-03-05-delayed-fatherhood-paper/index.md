@@ -7,7 +7,6 @@ authors:
 ---
 Whole-genome sequencing in multiplex families of schizophrenia revealed a mediating role of de novo mutations between paternal age and disease risk – now published in *Molecular Psychiatry*
 <!--more-->
-
 Delayed fatherhood has long been linked to an increased risk of schizophrenia in offspring, but the underlying mechanism remains unclear. In collaboration with Dr. Shi-Heng Wang from the NHRI, we performed trio analysis on schizophrenia sib-pairs to identify de novo mutations (DNMs). We discovered that DNMs were associated with both advanced paternal age and an earlier schizophrenia onset in probands. Further, causal mediation analysis showed that DNMs significantly mediated the effect of paternal age on the age of schizophrenia onset. Our study offers a potential causal explanation linking paternal age-related mutations to increased psychiatric risk in offspring.
 
 Reference: <br>
