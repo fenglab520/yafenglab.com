@@ -68,7 +68,7 @@ email: ''
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Administration
+  - Alumni
 ---
 
 Hello, I'm Ling-Hua. I love eating sweets and playing board games. My current goal is to get my driver's license.
