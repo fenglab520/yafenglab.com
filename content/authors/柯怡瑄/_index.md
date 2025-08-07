@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: Master's Student
+role: Research Assistant
 
 # Organizations/Affiliations
 organizations:
@@ -51,7 +51,7 @@ social:
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
 user_groups:
-  - Graduate Student
+  - Administration
 ---
 
 Ahem, testing? I'm Ke. Busy with coding and studying statistical genetics, but when I'm free, it's all about crocheting and sketching.

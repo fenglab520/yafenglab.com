@@ -4,7 +4,7 @@ summary: ""
 authors: []
 tags: []
 categories: []
-date: false
+date: 2024-06-15
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

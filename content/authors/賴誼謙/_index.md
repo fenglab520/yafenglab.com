@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: Master's Student
+role: 
 
 # Organizations/Affiliations
 organizations:
@@ -51,7 +51,7 @@ social:
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
 user_groups:
-  - Graduate Student
+  - Alumni
 ---
 
 Hi! I'm Yi-Chien, and I am currently a co-advising student of Prof. Feng. I'm interested in genetic epidemiology and affective disorders, and I also love listening to K-pop and dancing.

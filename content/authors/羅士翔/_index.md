@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: Bachelor's Student 
+role: Master's Student
 
 # Organizations/Affiliations
 organizations:
@@ -50,7 +50,7 @@ social:
 
 # Please copy&paste: Graduate student/Administration/Alumni
 user_groups:
-  - Undergraduate Student
+  - Graduate Student
 ---
 
 Hi! I'm Shih-Hsiang, but feel free to call me Shaun. I'm currently conducting research in genetic epidemiology. Outside of work, I'm passionate about basketball and music. It's great to meet you!
