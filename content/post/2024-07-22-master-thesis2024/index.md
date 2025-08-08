@@ -1,6 +1,7 @@
 ---
 title: Master's Milestone
 date: 2024-07-22
+draft: true
 reading_time: false
 authors:
     -
