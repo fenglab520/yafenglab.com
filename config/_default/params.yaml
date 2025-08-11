@@ -17,8 +17,8 @@ marketing:
   seo:
     site_type: Organization
     local_business_type: ''
-    org_name: ''
-    description: 'Feng Lab'
+    org_name: 'Fenglab'
+    description: 'Yen-Chen Anne Feng'
     #twitter: 'twitter handle'
   analytics:
     google_analytics: ''
