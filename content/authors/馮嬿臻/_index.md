@@ -1,6 +1,6 @@
 ---
 # Display name
-title: 馮嬿臻 Yen-Cheng Anne Feng
+title: 馮嬿臻 Yen-Chen Anne Feng
 
 # Full Name (for SEO)
 first_name: Anne
