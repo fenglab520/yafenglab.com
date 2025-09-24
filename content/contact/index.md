@@ -13,7 +13,7 @@ sections:
       email: ajfeng@ntu.edu.tw
       phone: +886 2 33668020
       address:
-        street: Institute of Health Data Analytics and Statistics, National Taiwan University
+        street: 
         city: 
         region: 
         postcode: ''
@@ -27,11 +27,11 @@ sections:
       #  - 'Monday 10:00 to 13:00'
       #  - 'Wednesday 09:00 to 10:00'
       # appointment_url: 'https://calendly.com'
-      #contact_links:
-      #  - icon: comments
-      #    icon_pack: fas
-      #    name: Discuss on Forum
-      #    link: 'https://discourse.gohugo.io'
+      contact_links:
+        - icon: location-dot
+          icon_pack: fas
+          name: Institute of Health Data Analytics and Statistics, National Taiwan University
+          link: 'https://hdas.ntu.edu.tw/'
     
       # Automatically link email and phone or display as text?
       autolink: true
