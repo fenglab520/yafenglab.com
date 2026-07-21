@@ -6,7 +6,7 @@ authors:
 #author_notes:
 
 date: "2026-02-11"
-doi: "https://doi.org/10.1038/s41467-026-69372-6"
+doi: "10.1038/s41467-026-69372-6"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: ""

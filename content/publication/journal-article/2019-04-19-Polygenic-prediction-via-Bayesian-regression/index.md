@@ -7,7 +7,7 @@ author_notes:
 - 
 
 date: "2019-04-19"
-doi: "https://doi.org/10.1038/s41467-019-09718-5"
+doi: "10.1038/s41467-019-09718-5"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: ""
