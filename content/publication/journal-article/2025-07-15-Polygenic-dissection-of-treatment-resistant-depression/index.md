@@ -17,7 +17,7 @@ publishDate: ""
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Journal of Affective Disorders*"
+publication: "*Journal of Affective Disorders, 381*, 350-359"
 publication_short: ""
 
 abstract: 

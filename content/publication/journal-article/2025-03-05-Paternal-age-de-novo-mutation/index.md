@@ -17,7 +17,7 @@ publishDate: ""
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Molecular Psychiatry,* 1-8"
+publication: "*Molecular Psychiatry, 30*(8), 3560-3567"
 publication_short: ""
 
 abstract: 
