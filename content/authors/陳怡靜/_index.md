@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: Master's Student
+role: 
 
 # Organizations/Affiliations
 organizations:
@@ -32,9 +32,6 @@ education:
       year: 2024
 
 social:
-  - icon: envelope
-    icon_pack: fas
-    link: 'mailto:r13855006@ntu.edu.tw'
   #- icon: twitter
   #  icon_pack: fab
   #  link: https://twitter.com/me
@@ -50,7 +47,7 @@ social:
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
 user_groups:
-  - Graduate Student
+  - Alumni
 ---
 
 Hi, my name is Yi-Jing. I love anime and animals, and I have a cute ragdoll cat. I hope this introduction helps you get to know me better!

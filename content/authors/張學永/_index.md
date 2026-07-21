@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: Research Assistant
+role: 
 
 # Organizations/Affiliations
 organizations:
@@ -36,14 +36,11 @@ education:
       year: 2023
 
 social:
-  - icon: envelope
-    icon_pack: fas
-    link: 'mailto:r10849044@ntu.edu.tw'
     
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
 user_groups:
-  - Administration
+  - Alumni
 ---
 
 Hello! I'm Xue-Yong and I'm working as a Research Assistant now. Nice to meet you.

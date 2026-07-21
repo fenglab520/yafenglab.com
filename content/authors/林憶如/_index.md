@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: Master's Student
+role: Research Assistant
 
 # Organizations/Affiliations
 organizations:
@@ -28,6 +28,9 @@ interests:
 
 education:
   courses:
+    - course: M.S. in Health Data Analytics and Statistics
+      institution: National Taiwan University
+      year: 2026
     - course: B.A. in Anthropology
       institution: National Tsing Hua University
       year: 2022
@@ -51,7 +54,7 @@ social:
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
 user_groups:
-  - Graduate Student
+  - Administration
 ---
 
 Hi! I’m I-Ju. Stepping into the world of statistical genetics from a background in humanities and social sciences. Love films, but recently adding more titles to my watchlist than actually watching movies.

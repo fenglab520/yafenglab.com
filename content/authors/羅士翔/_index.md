@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: Master's Student
+role: 
 
 # Organizations/Affiliations
 organizations:
@@ -32,9 +32,6 @@ education:
       year: 2025
 
 social:
-  - icon: envelope
-    icon_pack: fas
-    link: 'mailto:b10801010@ntu.edu.tw'
   #- icon: twitter
   #  icon_pack: fab
   #  link: 
@@ -50,7 +47,7 @@ social:
 
 # Please copy&paste: Graduate student/Administration/Alumni
 user_groups:
-  - Graduate Student
+  - Alumni
 ---
 
 Hi! I'm Shih-Hsiang, but feel free to call me Shaun. I'm currently conducting research in genetic epidemiology. Outside of work, I'm passionate about basketball and music. It's great to meet you!

@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: 
+role: PhD Student
 
 # Organizations/Affiliations
 organizations:
@@ -28,6 +28,9 @@ interests:
 
 education:
   courses:
+    - course: M.S. in Epidemiology and Preventive Medicine
+      institution: National Taiwan University
+      year: 2025
     - course: B.S. in Public Health
       institution: Kaohsiung Medical University
       year: 2023
@@ -51,7 +54,7 @@ social:
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
 user_groups:
-  - Alumni
+  - Graduate Student
 ---
 
 Hi! I'm Yi-Chien, and I am currently a co-advising student of Prof. Feng. I'm interested in genetic epidemiology and affective disorders, and I also love listening to K-pop and dancing.

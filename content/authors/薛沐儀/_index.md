@@ -14,7 +14,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Master's Student
+role: Research Assistant
 
 # Organizations/Affiliations
 organizations:
@@ -31,6 +31,9 @@ interests:
 
 education:
   courses:
+    - course: M.S. in Health Data Analytics and Statistics
+      institution: National Taiwan University
+      year: 2026
     - course: B.S. in Public Health
       institution: National Taiwan University
       year: 2024
@@ -64,7 +67,7 @@ email: ''
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Graduate Student
+  - Administration
 ---
 
 Hello! I'm Mu-Yi and apart from my current studies in the field of genetic epidemiology, I also love table tennis, tennis and gaming! 

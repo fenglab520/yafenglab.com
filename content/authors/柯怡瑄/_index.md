@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: Research Assistant
+role: 
 
 # Organizations/Affiliations
 organizations:
@@ -28,14 +28,14 @@ interests:
 
 education:
   courses:
+    - course: M.S. in Health Data Analytics and Statistics
+      institution: National Taiwan University
+      year: 2025
     - course: B.S. in Statistics
       institution: National Taipei University
       year: 2023
 
 social:
-  - icon: envelope
-    icon_pack: fas
-    link: 'mailto:r12855003@ntu.edu.tw'
   #- icon: twitter
   #  icon_pack: fab
   #  link: https://twitter.com/me
@@ -51,7 +51,7 @@ social:
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
 user_groups:
-  - Administration
+  - Alumni
 ---
 
 Ahem, testing? I'm Ke. Busy with coding and studying statistical genetics, but when I'm free, it's all about crocheting and sketching.

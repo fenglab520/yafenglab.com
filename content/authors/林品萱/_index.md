@@ -28,14 +28,14 @@ interests:
 
 education:
   courses:
+    - course: M.S. in Epidemiology and Preventive Medicine
+      institution: National Taiwan University
+      year: 2025
     - course: B.S. in Occupational therapy
       institution: National Taiwan University
       year: 2022
 
 social:
-  - icon: envelope
-    icon_pack: fas
-    link: 'mailto:r12849025@ntu.edu.tw'
   #- icon: twitter
   #  icon_pack: fab
   #  link: https://twitter.com/me
