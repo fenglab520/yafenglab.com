@@ -20,7 +20,7 @@
       {{- else -}}
         {{- $name := .LinkTitle -}}
         {{- if not $link_authors -}}
-          {{- $name = replace $name $pi_name (printf "<strong>%s</strong>" $pi_name) -}}
+          {{- $name = replace $name $pi_name (printf "<u><strong>%s</strong></u>" $pi_name) -}}
         {{- end -}}
         {{ $name | safeHTML }}
       {{- end -}}
