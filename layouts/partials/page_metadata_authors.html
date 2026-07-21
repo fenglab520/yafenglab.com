@@ -1,10 +1,12 @@
 {{/* Display author list. */}}
 {{/* Local override: for publications, render authors as plain text (no link to
-     the auto-generated author taxonomy page). Links are kept for all other
-     content types (e.g. blog posts, where authors link to member profiles). */}}
+     the auto-generated author taxonomy page) and bold the PI's name. Links are
+     kept for all other content types (e.g. blog posts, where authors link to
+     member profiles). */}}
 
 {{- $taxonomy := "authors" }}
 {{- $link_authors := ne $.Type "publication" -}}
+{{- $pi_name := "Feng, Y. A." -}}
 {{ if .Param $taxonomy }}
   {{ range $index, $value := (.GetTerms $taxonomy) }}
     {{- /* Highlight the author's name? */ -}}
@@ -16,7 +18,11 @@
       {{- if and .RelPermalink $link_authors -}}
         <a href="{{.RelPermalink}}">{{.LinkTitle}}</a>
       {{- else -}}
-        {{ .LinkTitle }}
+        {{- $name := .LinkTitle -}}
+        {{- if not $link_authors -}}
+          {{- $name = replace $name $pi_name (printf "<strong>%s</strong>" $pi_name) -}}
+        {{- end -}}
+        {{ $name | safeHTML }}
       {{- end -}}
     </span>
     {{- if isset $.Params "author_notes" -}}
