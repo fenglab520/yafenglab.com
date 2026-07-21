@@ -62,7 +62,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
   - icon: cv
     icon_pack: ai
-    link: uploads/CV_YAFeng-Jun2026-web.pdf
+    link: cv/
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
@@ -76,4 +76,4 @@ user_groups:
   - Principal Investigator
 ---
 
-Dr. Feng is a genetic epidemiologist and statistical geneticist. She holds a doctorate in genetic epidemiology and completed postdoctoral training in statistical genetics at Massachusetts General Hospital and the Broad Institute. With a particular interest in neuropsychiatric disorders, including epilepsy and mental illnesses, Dr. Feng’s lab studies the polygenic burden and rare genetic variations that underlie disease susceptibility. Her research also involves applying cross-trait and cross-population methodologies to enhance genetic risk prediction, as well as exploring omics contributions to longitudinal heath profiles, such as treatment response and severity. For further details, please see her [CV](/uploads/CV_YAFeng-Jun2026-web.pdf).
+Dr. Feng is a genetic epidemiologist and statistical geneticist. She holds a doctorate in genetic epidemiology and completed postdoctoral training in statistical genetics at Massachusetts General Hospital and the Broad Institute. With a particular interest in neuropsychiatric disorders, including epilepsy and mental illnesses, Dr. Feng’s lab studies the polygenic burden and rare genetic variations that underlie disease susceptibility. Her research also involves applying cross-trait and cross-population methodologies to enhance genetic risk prediction, as well as exploring omics contributions to longitudinal heath profiles, such as treatment response and severity. For further details, please see her [CV](/cv/).
