@@ -1,10 +1,10 @@
 ---
 # Display name
-title: 郭羿君
+title: 郭羿君 Yi-Chun Kuo
 
 # Full name (for SEO)
-first_name: 
-last_name: 
+first_name: Yi-Chun
+last_name: Kuo
 
 # Username (this should match the folder name)
 authors:

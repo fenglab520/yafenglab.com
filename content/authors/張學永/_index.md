@@ -39,8 +39,7 @@ social:
     
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
-user_groups:
-  - Alumni
+user_groups: []
 ---
 
 Hello! I'm Xue-Yong and I'm working as a Research Assistant now. Nice to meet you.

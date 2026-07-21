@@ -27,6 +27,9 @@ interests:
 
 education:
   courses:
+    - course: M.S. in Health Data Analytics and Statistics
+      institution: National Taiwan University
+      year: 2026
     - course: B.S. Statistics
       institution: National Cheng Kung University
       year: 2024

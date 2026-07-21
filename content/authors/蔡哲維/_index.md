@@ -1,10 +1,10 @@
 ---
 # Display name
-title: 蔡哲維
+title: 蔡哲維 Che-Wei Tsai
 
 # Full name (for SEO)
-first_name: 
-last_name: 
+first_name: Che-Wei
+last_name: Tsai
 
 # Username (this should match the folder name)
 authors:

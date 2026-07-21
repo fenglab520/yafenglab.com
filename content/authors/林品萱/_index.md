@@ -1,10 +1,10 @@
 ---
 # Chinese_name English_name
-title: 林品萱 Ping-Shuan LIN
+title: 林品萱 Ping-Shuan Lin
 
 # Full name
 first_name: Ping-Shuan
-last_name: LIN
+last_name: Lin
 
 # Username (this should match your chinese name)
 authors:

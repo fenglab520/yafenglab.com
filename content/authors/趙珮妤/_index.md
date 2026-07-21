@@ -1,10 +1,10 @@
 ---
 # Display name
-title: 趙珮妤
+title: 趙珮妤 Pei-Yu Chao
 
 # Full name (for SEO)
-first_name: 
-last_name: 
+first_name: Pei-Yu
+last_name: Chao
 
 # Username (this should match the folder name)
 authors:
