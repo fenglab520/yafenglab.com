@@ -20,7 +20,14 @@ publication_types: ["article-journal"]
 publication: "*Journal of Affective Disorders, 381*, 350-359"
 publication_short: ""
 
-abstract: 
+abstract: |
+  Treatment-resistant depression (TRD) affects one-third of major depressive disorder (MDD) patients. Previous pharmacogenetic studies suggest genetic variation may influence medication response but findings are heterogeneous. We conducted a comprehensive genetic investigation using proxy TRD phenotypes (TRDp) that mirror the treatment options of MDD from UK Biobank primary care records.
+
+  Among 15,125 White British MDD patients, we identified TRDp with medication changes (switching or receiving multiple antidepressants [AD]); augmentation therapy (antipsychotics; mood stabilizers; valproate; lithium); or electroconvulsive therapy (ECT). Hospitalized TRDp patients (HOSP-TRDp) were also identified. We conducted genome-wide association analysis, estimated SNP-heritability (h2), and assessed the genetic burden for nine psychiatric diseases using polygenic risk scores (PRS).
+
+  While no credible risk variants emerged, heritability analysis showed significant genetic influence on TRDp (liability h2 21-24 %), particularly for HOSP-TRDp (28-31 %). TRDp classified by AD changes and augmentation carried an elevated yet varied polygenic burden for MDD, ADHD, BD, and SCZ. Higher BD PRS increased the likelihood of receiving ECT, lithium, and valproate by 1.27-1.80 fold. Patients in the top 10 % PRS relative to the average had a 12-36 % and 24-51 % higher risk of TRDp and HOSP-TRDp, respectively.
+
+  Our findings support a significant polygenic basis for TRD, highlighting genetic and phenotypic distinctions from non-TRD. We demonstrate that different TRDp endpoints are enriched with various spectra of psychiatric genetic liability, offering insights into pharmacogenomics and TRD's complex genetic architecture.
 
 # Summary. An optional shortened abstract.
 summary: 
