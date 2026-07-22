@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: Postdoctoral researcher
+role: Postdoctoral Fellow
 
 # Organizations/Affiliations
 organizations:
@@ -48,9 +48,9 @@ social:
   #   icon_pack: ai
   #   link: files/cv.pdf
 
-# Please copy&paste 大小寫一定要一樣: Postdoctoral researcher/Administration/Alumni
+# Please copy&paste 大小寫一定要一樣: Postdoctoral Fellow/Administration/Alumni
 user_groups:
-  - Postdoctoral researcher
+  - Postdoctoral Fellow
 ---
 
 Hello! I'm Yun-Han.I am a trained pharmacist with expertise in pharmacoepidemiology, focusing on drug safety and effectiveness using nationwide databases. I specialize in designing and conducting studies with advanced methods while addressing biases through causal inference techniques. My experience includes performing statistical analyses on large-scale databases from Taiwan, Sweden, and the UK.
