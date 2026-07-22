@@ -9,3 +9,10 @@
 .row:has(.hero-media img) {
   align-items: center;
 }
+
+// Home hero on mobile (stacked): add space between the description and the photo
+@media (max-width: 767.98px) {
+  .hero-media {
+    margin-top: 1.75rem;
+  }
+}
