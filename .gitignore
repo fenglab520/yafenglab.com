@@ -6,3 +6,7 @@ assets/jsconfig.json
 
 # macOS
 .DS_Store
+
+# Non-web image formats Hugo can't process (would break the gallery build)
+*.heic
+*.HEIC
