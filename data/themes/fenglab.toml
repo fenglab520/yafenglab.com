@@ -1,0 +1,21 @@
+# Feng Lab theme — based on "minimal" with a slate-navy header
+name = "Feng Lab"
+
+[light]
+  # Primary (body links, accents)
+  primary = "#2962ff"
+
+  # Menu (navbar) — slate navy background with light text
+  menu_primary = "#2b3a55"
+  menu_text = "#c9d3e2"
+  menu_text_active = "#ffffff"
+  menu_title = "#ffffff"
+
+  # Home sections
+  home_section_odd = "rgb(255, 255, 255)"
+  home_section_even = "rgb(247, 247, 247)"
+
+[dark]
+  primary = "#bbdefb"
+  link = "#bbdefb"
+  link_hover = "#bbdefb"
