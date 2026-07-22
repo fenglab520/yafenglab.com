@@ -4,3 +4,8 @@
 #navbar-main .navbar-nav .nav-link {
   font-size: 0.9rem;
 }
+
+// Home hero: vertically center the description text with the group photo
+.row:has(.hero-media img) {
+  align-items: center;
+}
