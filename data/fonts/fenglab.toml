@@ -1,0 +1,11 @@
+# Font style — Lato throughout (body matches the navbar/headings)
+name = "Feng Lab"
+
+# Optional Google font URL
+google_fonts = "family=Lato:wght@400;700&family=Roboto+Mono"
+
+# Font families
+heading_font = "Lato"
+body_font = "Lato"
+nav_font = "Lato"
+mono_font = "Roboto Mono"
