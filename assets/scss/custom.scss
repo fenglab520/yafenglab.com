@@ -12,6 +12,20 @@
   }
 }
 
+// Home hero title: navy with a blue accent underline (Option 2)
+.hero-title {
+  color: #2b3a55;
+}
+.hero-title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 5px;
+  margin-top: 0.6rem;
+  background: #8fd0d0;
+  border-radius: 3px;
+}
+
 // Home hero: vertically center the description text with the group photo
 .row:has(.hero-media img) {
   align-items: center;
