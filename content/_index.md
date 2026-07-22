@@ -77,7 +77,22 @@ sections:
       title: Lab Life & Events
       subtitle:
       text: |
+        <style>
+        div.gallery-grid{display:flex;flex-wrap:nowrap;overflow-x:auto;grid-template-columns:none;grid-auto-rows:auto;gap:14px;grid-gap:14px;scroll-behavior:smooth;scroll-snap-type:x proximity;padding-bottom:10px;}
+        div.gallery-item{flex:0 0 auto;width:270px;height:190px;grid-row-end:auto;grid-column-end:auto;scroll-snap-align:start;border-radius:8px;}
+        .film-wrap{position:relative;}
+        .film-nav{position:absolute;top:calc(50% - 5px);transform:translateY(-50%);z-index:5;border:none;width:42px;height:42px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer;}
+        .film-nav:hover{background:rgba(0,0,0,.8);}
+        .film-prev{left:-8px;}
+        .film-next{right:-8px;}
+        @media(max-width:600px){.film-nav{display:none;}}
+        </style>
+
         {{< gallery album="events" >}}
+
+        <script>
+        (function(){var g=document.querySelector('.gallery-grid');if(!g||g.dataset.filmstrip)return;g.dataset.filmstrip=1;var w=document.createElement('div');w.className='film-wrap';g.parentNode.insertBefore(w,g);w.appendChild(g);function mk(c,t,d){var b=document.createElement('button');b.type='button';b.className='film-nav '+c;b.textContent=t;b.setAttribute('aria-label',d>0?'Scroll right':'Scroll left');b.addEventListener('click',function(){g.scrollBy({left:d*g.clientWidth*0.8,behavior:'smooth'});});w.appendChild(b);}mk('film-prev','‹',-1);mk('film-next','›',1);})();
+        </script>
     design:
       columns: '1'
       
