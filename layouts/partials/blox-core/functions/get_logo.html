@@ -1,0 +1,20 @@
+{{/* Local override: render the logo at 3x resolution so it stays crisp on */}}
+{{/* high-DPI (retina) displays. The navbar CSS constrains the display size, */}}
+{{/* so a larger source image is simply downscaled by the browser. */}}
+{{/* Inputs: constraint: max_height/fit (str); size (int) */}}
+
+{{ $scale := 3 }}
+{{ $size := mul (int .size) $scale }}
+
+{{ $logo := resources.Get "media/logo.png" | default (resources.Get "media/logo.svg") }}
+{{ $logo_proc := $logo }}
+
+{{ if resources.Get "media/logo.png" }}
+  {{ if eq .constraint "max_height" }}
+    {{ $logo_proc = ($logo.Resize (printf "x%d" $size)) }}
+  {{ else }}
+    {{ $logo_proc = ($logo.Fit (printf "%dx%d" $size $size)) }}
+  {{ end }}
+{{ end }}
+
+{{ return $logo_proc }}
