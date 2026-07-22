@@ -74,7 +74,7 @@ sections:
 
   - block: markdown
     content:
-      title: Lab Life & Events
+      title: Lab Life
       subtitle:
       text: |
         <style>
