@@ -74,10 +74,10 @@ sections:
 
   - block: markdown
     content:
-      title:
+      title: Lab Life & Events
       subtitle:
       text: |
-        {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
+        {{< gallery album="events" >}}
     design:
       columns: '1'
       
