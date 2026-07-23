@@ -185,6 +185,21 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
   }
 }
 
+// Lab Life grey block (home markdown section, the last block before the footer):
+// sit the content nearer the top and shorten the block, while keeping clear
+// space above the dark footer bar. Mirrors the theme's own responsive padding
+// breakpoint (110px desktop / 60px at <=768px) instead of flattening it.
+body[data-target="#navbar-main"] .home-section.wg-markdown {
+  padding-top: 45px;
+  padding-bottom: 75px;
+}
+@media screen and (max-width: 768px) {
+  body[data-target="#navbar-main"] .home-section.wg-markdown {
+    padding-top: 28px;
+    padding-bottom: 45px;
+  }
+}
+
 // People page: pop-up profile modal (non-PI members)
 .person-modal-trigger {
   cursor: pointer;
