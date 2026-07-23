@@ -45,7 +45,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Feng Lab. Maintained by Yen-Chen Anne Feng (馮嬿臻). Created by Mu-Yi Shih (薛沐儀). <br> Institute of Health Data Analytics and Statistics, College of Public Health, National Taiwan University'
+    notice: '© {year} Feng Lab. Maintained by Anne Feng. Created by Mu-Yi Shih.'
     license:
       enable: false
       allow_derivatives: false

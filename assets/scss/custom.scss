@@ -54,6 +54,31 @@ body[data-target="#TableOfContents"] .universal-wrapper > h1 {
   margin-top: 0;
 }
 
+// Footer: full-width dark teal bar with white text (like the top navbar)
+.page-footer {
+  background: #2b3a55;
+}
+.page-footer .site-footer,
+.page-footer .site-footer p,
+.page-footer .site-footer a {
+  color: #ffffff;
+}
+.page-footer .site-footer {
+  margin-top: 0;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+.page-footer .site-footer p {
+  margin-bottom: 0.2rem;
+  font-size: 12px;
+}
+.page-footer .site-footer p:last-child {
+  margin-bottom: 0;
+}
+.page-footer .site-footer a {
+  text-decoration: underline;
+}
+
 // Home hero title: navy with a blue accent underline (Option 2)
 .hero-title {
   color: #2b3a55;
