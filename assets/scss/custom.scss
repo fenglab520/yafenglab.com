@@ -50,6 +50,12 @@
   font-family: "Karla", sans-serif;
 }
 
+// PI personal (author) page: role + affiliation lines in Karla (body font),
+// not the Fraunces heading face.
+#profile .portrait-title h3 {
+  font-family: "Karla", sans-serif;
+}
+
 // Home section sub-titles (Latest News, Lab Life): smaller than the hero title
 body[data-target="#navbar-main"] .section-heading h1 {
   font-size: 28px;
@@ -259,7 +265,13 @@ body.person-modal-lock {
   margin-top: 1rem;
 }
 .person-modal .section-subheading {
-  font-weight: 700;
+  font-weight: 500;
   color: #2b3a55;
   margin-bottom: 0.3rem;
+}
+
+// "Interests" / "Education" subheadings on the author/PI personal page: medium
+// weight (match the pop-up profiles rather than the theme's heavy default).
+#profile-page .section-subheading {
+  font-weight: 500;
 }
