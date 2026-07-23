@@ -61,6 +61,15 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
   padding-bottom: 3rem;
 }
 
+// Constrain the navbar and the home/contact content to the same reading
+// width as Research/News/Publications (~1000px, centered), instead of
+// stretching edge-to-edge. (People is intentionally left as-is.)
+#navbar-main .container-xl,
+body[data-target="#navbar-main"] .home-section .container,
+.home-section.wg-contact .container {
+  max-width: 1000px;
+}
+
 // Footer: full-width dark teal bar with white text (like the top navbar)
 .page-footer {
   background: #2b3a55;
