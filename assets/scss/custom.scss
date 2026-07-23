@@ -61,12 +61,11 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
   padding-bottom: 3rem;
 }
 
-// Constrain the navbar and the home/contact content to the same reading
-// width as Research/News/Publications (~1000px, centered), instead of
-// stretching edge-to-edge. (People is intentionally left as-is.)
+// Constrain the navbar and the landing-page content (home, contact, people)
+// to the same reading width as Research/News/Publications (~1000px, centered),
+// instead of stretching edge-to-edge.
 #navbar-main .container-xl,
-body[data-target="#navbar-main"] .home-section .container,
-.home-section.wg-contact .container {
+.home-section .container {
   max-width: 1000px;
 }
 
