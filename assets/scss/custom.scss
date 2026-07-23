@@ -61,12 +61,16 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
   padding-bottom: 3rem;
 }
 
-// Constrain the navbar and the landing-page content (home, contact, people)
-// to the same reading width as Research/News/Publications (~1000px, centered),
-// instead of stretching edge-to-edge.
+// Site-wide content column width (centered, ~1120px). Applies to the navbar,
+// the landing-page content (home, contact, people), and the content pages
+// (Research/News/Publications, which the theme otherwise fixes at 1000px).
 #navbar-main .container-xl,
 .home-section .container {
-  max-width: 1000px;
+  max-width: 1120px;
+}
+.universal-wrapper {
+  width: 100%;
+  max-width: 1120px;
 }
 
 // Footer: full-width dark teal bar with white text (like the top navbar)
