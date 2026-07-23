@@ -40,7 +40,7 @@
 .people-person .portrait-title h3,
 .person-modal__name,
 .person-modal__role {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 // Home section sub-titles (Latest News, Lab Life): smaller than the hero title
@@ -151,6 +151,13 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
   margin: 0.6rem auto 0;
   background: #8fd0d0;
   border-radius: 3px;
+}
+
+// Home hero description ("We are a computational research group…"): a bit more
+// compact than the theme default (was ~1.35rem / 1.65 line-height).
+.hero-lead {
+  font-size: 1.12rem;
+  line-height: 1.5;
 }
 
 // Home hero: vertically center the description text with the group photo

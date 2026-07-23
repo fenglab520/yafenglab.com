@@ -1,11 +1,11 @@
-# Font style — Fraunces serif headings, Source Sans 3 body
+# Font style — Fraunces serif headings, Karla body
 name = "Feng Lab"
 
 # Optional Google font URL
-google_fonts = "family=Fraunces:opsz,wght@9..144,400..700&family=Source+Sans+3:wght@400;600;700&family=Roboto+Mono"
+google_fonts = "family=Fraunces:opsz,wght@9..144,400..700&family=Karla:wght@400;600;700&family=Roboto+Mono"
 
 # Font families
 heading_font = "Fraunces"
-body_font = "Source Sans 3"
-nav_font = "Source Sans 3"
+body_font = "Karla"
+nav_font = "Karla"
 mono_font = "Roboto Mono"
