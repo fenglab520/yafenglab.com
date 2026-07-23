@@ -19,6 +19,12 @@
   font-weight: 700;
 }
 
+// Home section sub-titles (Latest News, Lab Life): smaller than the hero title, teal
+body[data-target="#navbar-main"] .section-heading h1 {
+  font-size: 28px;
+  color: #178080;
+}
+
 // Tab pages only: centered light-teal underline under the title (like the home hero)
 body[data-target="#TableOfContents"] .universal-wrapper > h1 {
   text-align: center;
