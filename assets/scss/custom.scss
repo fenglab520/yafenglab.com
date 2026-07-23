@@ -129,3 +129,88 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
     margin-top: 1.75rem;
   }
 }
+
+// People page: pop-up profile modal (non-PI members)
+.person-modal-trigger {
+  cursor: pointer;
+}
+body.person-modal-lock {
+  overflow: hidden;
+}
+.person-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+}
+.person-modal.is-open {
+  display: block;
+}
+.person-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 28, 45, 0.55);
+}
+.person-modal__dialog {
+  position: relative;
+  width: calc(100% - 2rem);
+  max-width: 620px;
+  margin: 6vh auto;
+  max-height: 88vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2.2rem 2rem 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+.person-modal__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.9rem;
+  border: 0;
+  background: none;
+  font-size: 1.9rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #9aa3b2;
+}
+.person-modal__close:hover {
+  color: #2b3a55;
+}
+.person-modal__body {
+  text-align: center;
+}
+.person-modal__body .avatar {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+.person-modal__name {
+  color: #2b3a55;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+.person-modal__role {
+  font-weight: 600;
+  color: #555;
+}
+.person-modal__org {
+  color: #808894;
+  margin-bottom: 0.4rem;
+}
+.person-modal__bio {
+  text-align: left;
+  margin: 1.1rem 0 0.3rem;
+}
+.person-modal__meta {
+  text-align: left;
+  margin-top: 0.6rem;
+}
+.person-modal__section {
+  margin-top: 1rem;
+}
+.person-modal .section-subheading {
+  font-weight: 700;
+  color: #2b3a55;
+  margin-bottom: 0.3rem;
+}

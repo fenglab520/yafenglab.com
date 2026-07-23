@@ -14,8 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: 
-
+role: Master's Student
 # Organizations/Affiliations
 organizations:
   - name: National Taiwan University
@@ -50,7 +49,8 @@ social:
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
 user_groups:
-  - Alumni
+  - Previous Members
+
 ---
 
 Hi, my name is Yi-Jing. I love anime and animals, and I have a cute ragdoll cat. I hope this introduction helps you get to know me better!

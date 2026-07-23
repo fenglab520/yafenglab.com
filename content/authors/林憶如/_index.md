@@ -54,7 +54,8 @@ social:
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
 user_groups:
-  - Administration
+  - Admin / Research Associates
+
 ---
 
 Hi! I’m I-Ju. Stepping into the world of statistical genetics from a background in humanities and social sciences. Love films, but recently adding more titles to my watchlist than actually watching movies.

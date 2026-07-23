@@ -67,7 +67,8 @@ email: ''
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Administration
+  - Admin / Research Associates
+
 ---
 
 Hello! I'm Mu-Yi and apart from my current studies in the field of genetic epidemiology, I also love table tennis, tennis and gaming! 

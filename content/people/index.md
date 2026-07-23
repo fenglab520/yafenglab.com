@@ -15,10 +15,10 @@ sections:
           - Postdoctoral Fellow
           - Graduate Student
           - Undergraduate Student
-          - Administration
+          - Admin / Research Associates
           #- Research Assistant
           - Visitors
-          - Alumni
+          - Previous Members
       sort_by: Params.last_name
       sort_ascending: true
     design:

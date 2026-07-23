@@ -14,8 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: 
-
+role: Master's Student
 # Organizations/Affiliations
 organizations:
   - name: National Taiwan University
@@ -51,6 +50,7 @@ social:
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
 user_groups:
-  - Alumni
+  - Previous Members
+
 ---
 Hello! I'm Ping-Shuan. I'm currently studying substance use issues among the Taiwanese population, and I also have an interest in the field of Internet addiction. I enjoy exercising, watching esports broadcasts, and following KPOP celebrities! 

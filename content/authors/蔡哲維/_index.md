@@ -14,8 +14,7 @@ authors:
 superuser: true
 
 # Role/position
-role: 
-
+role: Undergraduate Student
 # Organizations/Affiliations
 organizations:
   - name: National Taiwan University
@@ -59,5 +58,6 @@ email: ''
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Alumni
+  - Previous Members
+
 ---

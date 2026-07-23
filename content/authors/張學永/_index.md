@@ -14,8 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: 
-
+role: Research Assistant
 # Organizations/Affiliations
 organizations:
   - name: National Taiwan University
@@ -39,7 +38,8 @@ social:
     
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
-user_groups: []
+user_groups:
+  - Previous Members
 ---
 
 Hello! I'm Xue-Yong and I'm working as a Research Assistant now. Nice to meet you.

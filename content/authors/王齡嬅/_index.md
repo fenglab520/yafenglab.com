@@ -14,8 +14,7 @@ authors:
 superuser: true
 
 # Bio 
-role: 
-
+role: Research Assistant
 # Organizations/Affiliations
 organizations:
   - name: National Taiwan University
@@ -68,7 +67,8 @@ email: ''
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Alumni
+  - Previous Members
+
 ---
 
 Hello, I'm Ling-Hua. I love eating sweets and playing board games. My current goal is to get my driver's license.

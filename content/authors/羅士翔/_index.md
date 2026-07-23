@@ -14,8 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: 
-
+role: Undergraduate Student
 # Organizations/Affiliations
 organizations:
   - name: National Taiwan University
@@ -47,7 +46,8 @@ social:
 
 # Please copy&paste: Graduate student/Administration/Alumni
 user_groups:
-  - Alumni
+  - Previous Members
+
 ---
 
 Hi! I'm Shih-Hsiang, but feel free to call me Shaun. I'm currently conducting research in genetic epidemiology. Outside of work, I'm passionate about basketball and music. It's great to meet you!

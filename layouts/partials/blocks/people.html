@@ -1,0 +1,159 @@
+{{/* Hugo Blox: People (local override) */}}
+{{/* Non-PI members open a pop-up profile modal instead of navigating to a
+     separate page. The PI keeps the normal link to their profile page. */}}
+
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $show_social := $block.design.show_social | default false }}
+{{ $show_interests := $block.design.show_interests | default true }}
+{{ $show_organizations := $block.design.show_organizations | default false }}
+{{ $show_role := $block.design.show_role | default true }}
+
+<div class="row justify-content-center people-widget">
+  {{ with $block.content.title }}
+    <div class="section-heading col-12 mb-3 text-center">
+      <h1 class="mb-0">{{ . | markdownify | emojify }}</h1>
+      {{ with $block.content.subtitle }}<p class="mt-1">{{ . | markdownify | emojify }}</p>{{ end }}
+    </div>
+  {{ end }}
+
+  {{ with $block.content.text }}
+    <div class="col-md-12">
+      {{ . | emojify | $page.RenderString }}
+    </div>
+  {{ end }}
+
+  {{ range $block.content.user_groups }}
+    {{ $group := . }}
+    {{ $is_pi := eq $group "Principal Investigator" }}
+    {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
+
+    {{/* Sort */}}
+    {{ $sort_by := $block.content.sort_by | default "Params.last_name" }}
+    {{ $sort_by = partial "blox-core/functions/get_sort_by_parameter" $sort_by }}
+    {{ $sort_ascending := $block.content.sort_ascending | default true }}
+    {{ $sort_order := cond $sort_ascending "asc" "desc" }}
+    {{ $query = sort $query $sort_by $sort_order }}
+
+    {{if $query | and (gt (len $block.content.user_groups) 1) }}
+      <div class="col-md-12">
+        <h2 class="mb-4">{{ $group | markdownify }}</h2>
+      </div>
+    {{end}}
+
+    {{ range $query }}
+      {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
+      {{/* Get link to user's profile page. */}}
+      {{ $link := "" }}
+      {{ with site.GetPage (printf "/authors/%s" (path.Base .File.Dir)) }}
+        {{ $link = .RelPermalink }}
+      {{ end }}
+
+      {{/* Avatar image source */}}
+      {{ $src := "" }}
+      {{ if site.Params.features.avatar.gravatar }}
+        {{ $src = printf "https://s.gravatar.com/avatar/%s?s=150" (md5 .Params.email) }}
+      {{ else if $avatar }}
+        {{ $avatar_image := $avatar.Fill "270x270 Center" }}
+        {{ $src = $avatar_image.RelPermalink }}
+      {{ end }}
+      {{ $avatar_shape := site.Params.features.avatar.shape | default "circle" }}
+      {{ $shape_class := cond (eq $avatar_shape "square") "avatar-square" "avatar-circle" }}
+
+      {{ $modal_id := printf "person-modal-%s" .File.UniqueID }}
+
+      <div class="col-12 col-sm-auto people-person">
+        {{ if $src }}
+          {{ if $is_pi }}
+            {{with $link}}<a href="{{.}}">{{end}}<img width="270" height="270" loading="lazy" class="avatar {{ $shape_class }}" src="{{ $src }}" alt="Avatar">{{if $link}}</a>{{end}}
+          {{ else }}
+            <a href="#" class="person-modal-trigger" data-person-modal="{{ $modal_id }}" role="button" aria-haspopup="dialog" aria-label="View profile of {{ .Title }}"><img width="270" height="270" loading="lazy" class="avatar {{ $shape_class }}" src="{{ $src }}" alt="Avatar"></a>
+          {{ end }}
+        {{ end }}
+
+        <div class="portrait-title">
+          <h2>
+            {{ if $is_pi }}
+              {{with $link}}<a href="{{.}}">{{end}}{{ .Title }}{{if $link}}</a>{{end}}
+            {{ else }}
+              <a href="#" class="person-modal-trigger" data-person-modal="{{ $modal_id }}" role="button" aria-haspopup="dialog">{{ .Title }}</a>
+            {{ end }}
+          </h2>
+          {{ if and $show_organizations .Params.organizations }}{{ range .Params.organizations }}<h3>{{ .name }}</h3>{{ end }}{{ end }}
+          {{ if and $show_role .Params.role }}<h3>{{ .Params.role | markdownify | emojify }}</h3>{{ end }}
+          {{ if $show_social }}{{ partial "social_links" . }}{{ end }}
+          {{ if and $show_interests .Params.interests }}<p class="people-interests">{{ delimit .Params.interests ", " | markdownify | emojify }}</p>{{ end }}
+        </div>
+
+        {{/* Pop-up profile (non-PI members only) */}}
+        {{ if not $is_pi }}
+          <div class="person-modal" id="{{ $modal_id }}" aria-hidden="true">
+            <div class="person-modal__overlay" data-person-modal-close></div>
+            <div class="person-modal__dialog" role="dialog" aria-modal="true" aria-label="{{ .Title }}">
+              <button type="button" class="person-modal__close" data-person-modal-close aria-label="Close">&times;</button>
+              <div class="person-modal__body">
+                {{ if $src }}<img class="avatar {{ $shape_class }}" src="{{ $src }}" alt="{{ .Title }}">{{ end }}
+                <h2 class="person-modal__name">{{ .Title }}</h2>
+                {{ with .Params.role }}<div class="person-modal__role">{{ . | markdownify | emojify }}</div>{{ end }}
+                {{ range .Params.organizations }}<div class="person-modal__org">{{ .name }}</div>{{ end }}
+                {{ partial "social_links" . }}
+                {{ with .Content }}<div class="person-modal__bio article-style">{{ . }}</div>{{ end }}
+                <div class="person-modal__meta">
+                  {{ with .Params.interests }}
+                    <div class="person-modal__section">
+                      <div class="section-subheading">{{ i18n "interests" | default "Interests" | markdownify }}</div>
+                      <ul class="ul-interests mb-0">{{ range . }}<li>{{ . | markdownify | emojify }}</li>{{ end }}</ul>
+                    </div>
+                  {{ end }}
+                  {{ with .Params.education }}
+                    <div class="person-modal__section">
+                      <div class="section-subheading">{{ i18n "education" | default "Education" | markdownify }}</div>
+                      <ul class="ul-edu fa-ul mb-0">
+                        {{ range .courses }}
+                          <li><i class="fa-li fas fa-graduation-cap"></i><div class="description"><p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p><p class="institution">{{ .institution }}</p></div></li>
+                        {{ end }}
+                      </ul>
+                    </div>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
+
+{{/* Modal open/close behaviour (rendered once with the people widget) */}}
+<script>
+(function () {
+  function openModal(id) {
+    var m = document.getElementById(id);
+    if (!m) return;
+    m.classList.add('is-open');
+    m.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('person-modal-lock');
+  }
+  function closeAll() {
+    document.querySelectorAll('.person-modal.is-open').forEach(function (m) {
+      m.classList.remove('is-open');
+      m.setAttribute('aria-hidden', 'true');
+    });
+    document.body.classList.remove('person-modal-lock');
+  }
+  document.querySelectorAll('.person-modal-trigger').forEach(function (t) {
+    t.addEventListener('click', function (e) {
+      e.preventDefault();
+      openModal(t.getAttribute('data-person-modal'));
+    });
+  });
+  document.querySelectorAll('[data-person-modal-close]').forEach(function (c) {
+    c.addEventListener('click', closeAll);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeAll();
+  });
+})();
+</script>

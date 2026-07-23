@@ -14,8 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: 
-
+role: Research Assistant
 # Organizations/Affiliations
 organizations:
   - name: National Taiwan University
@@ -51,7 +50,8 @@ social:
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
 user_groups:
-  - Alumni
+  - Previous Members
+
 ---
 
 Ahem, testing? I'm Ke. Busy with coding and studying statistical genetics, but when I'm free, it's all about crocheting and sketching.

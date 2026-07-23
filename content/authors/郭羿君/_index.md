@@ -14,8 +14,7 @@ authors:
 superuser: true
 
 # Role/position
-role: 
-
+role: Master's Student
 # Organizations/Affiliations
 organizations:
   - name: National Taiwan University
@@ -61,6 +60,7 @@ email: ''
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Alumni
+  - Previous Members
+
 ---
 Hi! I graduated in 2024 and my thesis paper's topic was "Polygenic contribution to disease risk and burden for complex disorders in the Taiwanese population"!
