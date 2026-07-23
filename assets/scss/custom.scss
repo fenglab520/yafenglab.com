@@ -335,10 +335,11 @@ body.post-modal-lock {
   margin-bottom: 1.1rem;
 }
 .post-modal__img {
-  width: 100%;
+  display: block;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 1.3rem;
+  margin: 0 auto 1.3rem;
 }
 .post-modal__body {
   text-align: left;

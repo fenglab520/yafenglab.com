@@ -124,9 +124,12 @@
       <h2 class="post-modal__title">{{ $item.Title }}</h2>
       <div class="post-modal__date">{{ $item.Date.Format "Jan 2, 2006" }}</div>
       {{ with $resource }}
-        {{ $big := .Resize "1000x" }}
+        {{/* Only downscale large images; never upscale small ones (that just
+             blurs them). Small originals render at their native size. */}}
+        {{ $big := . }}
+        {{ if gt .Width 1400 }}{{ $big = .Resize "1400x" }}{{ end }}
         {{ if ne $big.MediaType.SubType "gif" }}{{ $big = $big.Process "webp" }}{{ end }}
-        <img class="post-modal__img" src="{{ $big.RelPermalink }}" alt="{{ $item.Title }}" loading="lazy">
+        <img class="post-modal__img" src="{{ $big.RelPermalink }}" width="{{ $big.Width }}" height="{{ $big.Height }}" alt="{{ $item.Title }}" loading="lazy">
       {{ end }}
       <div class="post-modal__body article-style">
         {{ $item.Content }}
