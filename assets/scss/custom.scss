@@ -54,6 +54,13 @@ body[data-target="#TableOfContents"] .universal-wrapper > h1 {
   margin-top: 0;
 }
 
+// Space between page content and the footer bar (content pages).
+// Only the content wrapper (not the title wrapper, which has .pt-3), so the
+// title-to-content gap is unaffected.
+body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
+  padding-bottom: 3rem;
+}
+
 // Footer: full-width dark teal bar with white text (like the top navbar)
 .page-footer {
   background: #2b3a55;
