@@ -3,7 +3,7 @@
 // Navbar logo (DNA icon + "Feng Lab" wordmark): a bit smaller than the theme's
 // 40px default so it sits more compactly in the header.
 #navbar-main .navbar-brand img {
-  max-height: 36px;
+  max-height: 37px;
   height: auto;
 }
 
@@ -170,7 +170,7 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
 // compact than the theme default (was ~1.35rem / 1.65 line-height).
 .hero-lead {
   font-size: 1.2rem;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 
 // Home hero: vertically center the description text with the group photo
