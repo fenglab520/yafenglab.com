@@ -185,13 +185,6 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
   }
 }
 
-// Lab Life grey block (home markdown section): tighten the top/bottom padding
-// so the content sits nearer the top and the whole block is shorter.
-body[data-target="#navbar-main"] .home-section.wg-markdown {
-  padding-top: 24px;
-  padding-bottom: 34px;
-}
-
 // People page: pop-up profile modal (non-PI members)
 .person-modal-trigger {
   cursor: pointer;
