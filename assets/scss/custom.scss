@@ -185,6 +185,20 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
   }
 }
 
+// Latest News block: trim the padding so it sits closer to the grey hero block
+// above it and to the Lab Life block below. Same responsive breakpoint as the
+// theme (110px desktop / 60px at <=768px).
+body[data-target="#navbar-main"] .home-section.wg-collection {
+  padding-top: 55px;
+  padding-bottom: 45px;
+}
+@media screen and (max-width: 768px) {
+  body[data-target="#navbar-main"] .home-section.wg-collection {
+    padding-top: 32px;
+    padding-bottom: 26px;
+  }
+}
+
 // Lab Life grey block (home markdown section, the last block before the footer):
 // sit the content nearer the top and shorten the block, while keeping clear
 // space above the dark footer bar. Mirrors the theme's own responsive padding
