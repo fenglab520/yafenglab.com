@@ -34,6 +34,15 @@ body[data-target="#TableOfContents"] .universal-wrapper > h1::after {
   border-radius: 3px;
 }
 
+// Consistent tab-page title vertical position (same gap below the navbar)
+body[data-target="#TableOfContents"] .home-section,
+body[data-target="#TableOfContents"] .universal-wrapper.pt-3 {
+  padding-top: 2.5rem !important;
+}
+body[data-target="#TableOfContents"] .universal-wrapper > h1 {
+  margin-top: 0;
+}
+
 // Home hero title: navy with a blue accent underline (Option 2)
 .hero-title {
   color: #2b3a55;
