@@ -1,5 +1,5 @@
 ---
-title: Best Poster Award! 
+title: Best Poster Award
 date: 2024-05-09
 reading_time: false
 authors:
