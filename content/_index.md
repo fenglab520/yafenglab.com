@@ -36,7 +36,7 @@ sections:
       order: desc
       page_type: post
     design:
-      view: compact
+      view: minimal
       columns: '1'
 
   # - block: markdown

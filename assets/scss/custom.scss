@@ -344,3 +344,45 @@ body.post-modal-lock {
 .post-modal__body {
   text-align: left;
 }
+
+// Minimal news list (home "Latest News"): text-only rows, date + title +
+// one-line summary, separated by hairline dividers.
+.news-min {
+  padding: 1rem 0;
+  border-bottom: 0.5px solid #e5e7eb;
+  text-align: left;
+}
+.news-min:first-of-type {
+  padding-top: 0.25rem;
+}
+.news-min__date {
+  color: #808894;
+  font-size: 0.82rem;
+  margin-bottom: 0.25rem;
+}
+.news-min__title {
+  margin-bottom: 0.3rem;
+}
+.news-min__title a {
+  color: #2b3a55;
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  text-decoration: none;
+}
+.news-min__title a:hover {
+  text-decoration: underline;
+}
+.news-min__summary {
+  color: #55585d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.news-min__summary p {
+  margin: 0;
+}
