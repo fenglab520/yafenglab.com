@@ -40,6 +40,11 @@ body[data-target="#navbar-main"] .section-heading h1::after {
   border-radius: 3px;
 }
 
+// Shorter underline for the (smaller) home sub-titles
+body[data-target="#navbar-main"] .section-heading h1::after {
+  width: 80px;
+}
+
 // Consistent tab-page title vertical position (same gap below the navbar)
 body[data-target="#TableOfContents"] .home-section,
 body[data-target="#TableOfContents"] .universal-wrapper.pt-3 {
