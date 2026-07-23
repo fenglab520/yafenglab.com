@@ -1,11 +1,11 @@
-# Font style — Lato throughout (body matches the navbar/headings)
+# Font style — Fraunces serif headings, Lato body
 name = "Feng Lab"
 
 # Optional Google font URL
-google_fonts = "family=Lato:wght@400;700&family=Roboto+Mono"
+google_fonts = "family=Fraunces:opsz,wght@9..144,400..700&family=Lato:wght@400;700&family=Roboto+Mono"
 
 # Font families
-heading_font = "Lato"
+heading_font = "Fraunces"
 body_font = "Lato"
 nav_font = "Lato"
 mono_font = "Roboto Mono"

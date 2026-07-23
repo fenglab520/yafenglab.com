@@ -12,11 +12,35 @@
   }
 }
 
-// Section + page titles: teal and bold
+// Section + page titles: dark teal, medium weight (Fraunces reads bold, so
+// a lighter weight keeps it elegant rather than heavy)
 .section-heading h1,
 .universal-wrapper > h1 {
   color: #2b3a55;
-  font-weight: 700;
+  font-weight: 500;
+}
+
+// Article/post sub-titles (Latest News on the home page, and the News page
+// listing) — match the lighter title weight instead of the theme's bold.
+.article-title,
+.article-title a {
+  font-weight: 500;
+}
+
+// In-content paragraph titles (e.g. the Research page section headings, which
+// are bolded in markdown) — soften to the same medium weight.
+.article-style h2,
+.article-style h2 strong {
+  font-weight: 500;
+}
+
+// People page: keep member names and positions in Lato (body font), not the
+// Fraunces heading face. Applies to the cards and the profile pop-ups.
+.people-person .portrait-title h2,
+.people-person .portrait-title h3,
+.person-modal__name,
+.person-modal__role {
+  font-family: "Lato", sans-serif;
 }
 
 // Home section sub-titles (Latest News, Lab Life): smaller than the hero title
@@ -104,16 +128,27 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
   text-decoration: underline;
 }
 
-// Home hero title: navy with a blue accent underline (Option 2)
+// Home hero title: navy, centered, medium weight, with a centered accent underline.
+// Stretch the glyphs horizontally (like the Feng Lab logo wordmark) rather than
+// spacing the letters apart.
 .hero-title {
   color: #2b3a55;
+  font-weight: 400;
+  text-align: center;
+  transform: scaleX(1.04);
+  transform-origin: center;
+}
+// The horizontal stretch can push the title box a few px past the viewport on
+// narrow screens — clip it at the hero section so it never creates page scroll.
+.home-section.wg-hero {
+  overflow-x: clip;
 }
 .hero-title::after {
   content: "";
   display: block;
   width: 120px;
   height: 5px;
-  margin-top: 0.6rem;
+  margin: 0.6rem auto 0;
   background: #8fd0d0;
   border-radius: 3px;
 }

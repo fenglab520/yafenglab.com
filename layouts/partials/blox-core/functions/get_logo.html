@@ -3,7 +3,7 @@
 {{/* so a larger source image is simply downscaled by the browser. */}}
 {{/* Inputs: constraint: max_height/fit (str); size (int) */}}
 
-{{ $scale := 3 }}
+{{ $scale := 4 }}
 {{ $size := mul (int .size) $scale }}
 
 {{ $logo := resources.Get "media/logo.png" | default (resources.Get "media/logo.svg") }}
