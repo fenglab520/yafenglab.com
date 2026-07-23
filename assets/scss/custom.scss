@@ -12,6 +12,28 @@
   }
 }
 
+// Section + page titles: teal and bold
+.section-heading h1,
+.universal-wrapper > h1 {
+  color: #2b3a55;
+  font-weight: 700;
+}
+
+// Tab pages only: centered light-teal underline under the title (like the home hero)
+body[data-target="#TableOfContents"] .universal-wrapper > h1 {
+  text-align: center;
+}
+body[data-target="#TableOfContents"] .section-heading h1::after,
+body[data-target="#TableOfContents"] .universal-wrapper > h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 5px;
+  margin: 0.6rem auto 0;
+  background: #8fd0d0;
+  border-radius: 3px;
+}
+
 // Home hero title: navy with a blue accent underline (Option 2)
 .hero-title {
   color: #2b3a55;
