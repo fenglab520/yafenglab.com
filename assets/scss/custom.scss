@@ -34,13 +34,13 @@
   font-weight: 500;
 }
 
-// People page: keep member names and positions in Lato (body font), not the
+// People page: keep member names and positions in the sans body font, not the
 // Fraunces heading face. Applies to the cards and the profile pop-ups.
 .people-person .portrait-title h2,
 .people-person .portrait-title h3,
 .person-modal__name,
 .person-modal__role {
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
 }
 
 // Home section sub-titles (Latest News, Lab Life): smaller than the hero title
