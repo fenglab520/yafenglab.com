@@ -34,10 +34,7 @@ education:
     - course: M.S. Epidemiology and Preventive Medicine
       institution: National Taiwan University
       year: 2012
-    - course: B.S. Public Health
-      institution: National Taiwan University
-      year: 2011
-    - course: B.S. Biochemical Science and Technology
+    - course: B.S. Public Health / Biochemical Science and Technology (dual major)
       institution: National Taiwan University
       year: 2011
 
