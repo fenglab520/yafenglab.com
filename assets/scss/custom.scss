@@ -305,6 +305,12 @@ body.person-modal-lock {
   font-weight: 500;
 }
 
+// Author page: add breathing room between the last line and the footer bar
+// (the profile section otherwise has zero bottom padding).
+#profile-page {
+  padding-bottom: 3.5rem;
+}
+
 // News pop-up: clicking a news item opens the full post in a modal (same idea
 // as the People profile pop-ups), instead of navigating to a separate page.
 .post-modal-trigger {
