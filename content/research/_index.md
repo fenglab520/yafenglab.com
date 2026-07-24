@@ -3,7 +3,7 @@ title: Research Areas
 
 ---
 
-<img src="/media/research.png" alt="Overview of the lab's three research areas" width="2000" height="845" loading="eager" fetchpriority="high" style="max-width:980px;width:100%;height:auto;display:block;margin:0 auto;">
+<img src="/media/research.png" alt="Overview of the lab's three research areas" width="2000" height="845" loading="eager" fetchpriority="high" style="max-width:980px;width:100%;height:auto;display:block;margin:2.25rem auto 0;">
 
 ## **Genetic architecture of neuropsychiatric disorders**
 Neuropsychiatric disorders have a clear genetic basis and pose an increasing societal burden, with considerable disparities in research and healthcare across populations.
