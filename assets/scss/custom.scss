@@ -19,9 +19,25 @@
   height: auto;
 }
 
+// Shorten the desktop navbar a touch (theme default is 70px). Mobile keeps the
+// theme's 50px. The 38px logo + brand padding fits comfortably in 60px.
+@media (min-width: 768px) {
+  #navbar-main {
+    height: 60px;
+  }
+}
+
 // Enlarge the navbar tab links (Home, News, Research, People, Publications, Contact)
 #navbar-main .navbar-nav .nav-link {
   font-size: 0.9rem;
+}
+
+// More breathing room between the tab names (desktop horizontal nav only).
+@media (min-width: 992px) {
+  #navbar-main .navbar-nav .nav-item {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
 }
 
 // Home page: keep the "Home" tab in its active (bold, white) state at all times.
