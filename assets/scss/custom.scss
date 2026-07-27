@@ -7,9 +7,9 @@
   transition: background-color 0.25s ease;
 }
 .header--scrolled #navbar-main {
-  background-color: rgba(43, 58, 85, 0.8) !important;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  background-color: rgba(43, 58, 85, 0.9) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 // Navbar logo (DNA icon + "Feng Lab" wordmark): a bit smaller than the theme's
