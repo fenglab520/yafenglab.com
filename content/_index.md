@@ -19,7 +19,7 @@ sections:
       image:
         filename: group_photo.jpeg
       
-      text: <span style="font-size:0.95em"> We are a computational research group [@NTU](https://www.ntu.edu.tw) dedicated to studying the genetic epidemiology and biology of human complex traits, with an emphasis on the susceptibility, severity, and progression of neuro-psychiatric disorders. Our work extends to analyses across diverse ancestries and multi-omics data, aiming to translate genomics research into better healthcare and public health outcomes. </span>
+      text: <span style="font-size:0.95em"> We are a computational research group at [National Taiwan University](https://www.ntu.edu.tw) dedicated to studying the genetic epidemiology of human complex traits, with a focus on the susceptibility, severity, and progression of neuro-psychiatric disorders. Our work extends to analyses across diverse ancestries and multi-omics data, aiming to translate genomic discoveries into better healthcare and public health outcomes. </span>
   - block: collection
     content:
       title: Latest News
