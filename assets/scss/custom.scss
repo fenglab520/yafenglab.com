@@ -1,5 +1,17 @@
 // Custom project overrides (auto-imported by the theme's main.scss)
 
+// Sticky navbar: once the page is scrolled, make the bar slightly translucent
+// with a subtle blur (the `.header--scrolled` class is toggled by a small
+// scroll listener in the footer partial). At the very top it stays fully solid.
+#navbar-main {
+  transition: background-color 0.25s ease;
+}
+.header--scrolled #navbar-main {
+  background-color: rgba(43, 58, 85, 0.8) !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
 // Navbar logo (DNA icon + "Feng Lab" wordmark): a bit smaller than the theme's
 // 40px default so it sits more compactly in the header.
 #navbar-main .navbar-brand img {

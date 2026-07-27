@@ -15,3 +15,17 @@
        footer attribution. */}}
 
 </footer>
+
+{{/* Toggle a `.header--scrolled` class on the sticky header once the page is
+     scrolled, so the navbar can go slightly translucent (see custom.scss). */}}
+<script>
+(function () {
+  var header = document.querySelector('.page-header');
+  if (!header) return;
+  function onScroll() {
+    header.classList.toggle('header--scrolled', window.scrollY > 8);
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>

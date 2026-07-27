@@ -32,6 +32,10 @@ marketing:
 # Site header
 
 header:
+  # Keep the navbar sticky (visible) while scrolling on every page, not just the
+  # home page. Without this, non-home pages use "Headroom" JS that hides the bar
+  # on scroll-down.
+  on_scroll: sticky
   navbar:
     enable: true
     align: r
