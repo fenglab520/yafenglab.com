@@ -24,6 +24,15 @@
   font-size: 0.9rem;
 }
 
+// Home page: keep the "Home" tab in its active (bold, white) state at all times.
+// The landing page runs Bootstrap scrollspy (data-spy), which strips the
+// server-set `.active` class from Home as you scroll past sections that don't
+// map to a nav item — leaving nothing highlighted. Pin it here.
+body[data-target="#navbar-main"] #navbar-main .navbar-nav .nav-item:first-child .nav-link {
+  font-weight: 700;
+  color: #ffffff;
+}
+
 // Enlarge the navbar tab links in the collapsed (mobile/tablet) menu
 @media (max-width: 991.98px) {
   #navbar-main .navbar-nav .nav-link {
