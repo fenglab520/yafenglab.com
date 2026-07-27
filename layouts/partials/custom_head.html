@@ -1,0 +1,29 @@
+{{/* Person structured data (schema.org JSON-LD) for the PI.
+     Emitted only on the PI's profile page so it describes that page's subject.
+     Built as a map and serialized once (jsonify) to avoid the double-encoding
+     that happens when interpolating strings inside a <script> context.
+     `url`/`image` use .Permalink so they follow the deployed domain; `sameAs`
+     consolidates the English + Chinese name identity across trusted profiles. */}}
+{{ if and .Params.user_groups (in .Params.user_groups "Principal Investigator") }}
+  {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
+  {{ $schema := dict
+      "@context" "https://schema.org"
+      "@type" "Person"
+      "name" "Yen-Chen Anne Feng"
+      "alternateName" "馮嬿臻"
+      "givenName" "Yen-Chen Anne"
+      "familyName" "Feng"
+      "jobTitle" "Assistant Professor"
+      "affiliation" (dict "@type" "Organization" "name" "Institute of Health Data Analytics and Statistics, National Taiwan University" "url" "https://www.ntu.edu.tw/")
+      "worksFor" (dict "@type" "Organization" "name" "National Taiwan University" "url" "https://www.ntu.edu.tw/")
+      "url" .Permalink
+      "sameAs" (slice
+        "https://orcid.org/0000-0003-2116-3645"
+        "https://scholars.lib.ntu.edu.tw/entities/person/a9e9ee37-1e9c-49bf-b82c-65343c4dfe97"
+        "https://scholar.google.com/citations?user=O3xpGs4AAAAJ&hl=en"
+        "https://twitter.com/AnnejaneF"
+        "https://github.com/Annefeng")
+  }}
+  {{ if $avatar }}{{ $schema = merge $schema (dict "image" $avatar.Permalink) }}{{ end }}
+  <script type="application/ld+json">{{ $schema | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{ end }}
