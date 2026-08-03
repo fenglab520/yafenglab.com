@@ -10,7 +10,7 @@ last_name: Feng
 superuser: true
 
 # Role/position
-role: Assistant Professor 
+role: Associate Professor 
 
 # Organizations/Affiliations
 organizations:
