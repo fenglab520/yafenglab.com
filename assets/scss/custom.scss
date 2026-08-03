@@ -342,6 +342,19 @@ body.person-modal-lock {
   font-weight: 500;
 }
 
+// Author page: a 6.5 / 5.5 split for the expertise+education vs. honors columns
+// (Bootstrap only offers whole columns). Desktop only; mobile keeps stacking.
+@media (min-width: 768px) {
+  .about-col-left {
+    flex: 0 0 54.1667%;
+    max-width: 54.1667%;
+  }
+  .about-col-right {
+    flex: 0 0 45.8333%;
+    max-width: 45.8333%;
+  }
+}
+
 // Author page: add breathing room between the last line and the footer bar
 // (the profile section otherwise has zero bottom padding).
 #profile-page {

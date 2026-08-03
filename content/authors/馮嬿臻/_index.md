@@ -38,6 +38,21 @@ education:
       institution: National Taiwan University
       year: 2011
 
+# Selected honors & awards (shown on the profile page)
+awards:
+  - award: Yushan Young Scholar
+    organization: Ministry of Education, Taiwan
+    year: '2022–2027'
+  - award: Innovation Fellowship
+    organization: Vertex Pharmaceuticals
+    year: '2020–2021'
+  - award: Early Career Investigator Award
+    organization: World Congress of Psychiatric Genetics
+    year: '2019'
+  - award: Reviewer's Choice Award
+    organization: American Society of Human Genetics
+    year: '2016'
+
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
