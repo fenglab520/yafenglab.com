@@ -96,8 +96,9 @@
 
     <div class="row">
 
-      {{ if or $person.interests $person.education }}
-      <div class="col-md-7 about-col-left">
+      {{/* Areas of Expertise + Honors & Awards — left column. */}}
+      {{ if or $person.interests $person.awards }}
+      <div class="col-md-6 about-col-left">
         {{ with $person.interests }}
         <div class="section-subheading">Areas of Expertise</div>
         <ul class="ul-interests mb-0">
@@ -107,16 +108,16 @@
         </ul>
         {{ end }}
 
-        {{/* Education — below Areas of Expertise. */}}
-        {{ with $person.education }}
-        <div class="section-subheading{{ if $person.interests }} mt-4{{ end }}">{{ i18n "education" | markdownify }}</div>
+        {{/* Honors & Awards — below Areas of Expertise. */}}
+        {{ with $person.awards }}
+        <div class="section-subheading{{ if $person.interests }} mt-4{{ end }}">Honors &amp; Awards</div>
         <ul class="ul-edu fa-ul mb-0">
-          {{ range .courses }}
+          {{ range . }}
           <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
+            <i class="fa-li fas fa-award"></i>
             <div class="description">
-              <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
-              <p class="institution">{{ .institution }}</p>
+              <p class="course">{{ .award }}{{ with .year }}, {{ . }}{{ end }}</p>
+              <p class="institution">{{ .organization }}</p>
             </div>
           </li>
           {{ end }}
@@ -125,17 +126,17 @@
       </div>
       {{ end }}
 
-      {{/* Honors & Awards — right column. */}}
-      {{ with $person.awards }}
-      <div class="col-md-5 about-col-right">
-        <div class="section-subheading">Honors &amp; Awards</div>
+      {{/* Education — right column. */}}
+      {{ with $person.education }}
+      <div class="col-md-6 about-col-right">
+        <div class="section-subheading">{{ i18n "education" | markdownify }}</div>
         <ul class="ul-edu fa-ul mb-0">
-          {{ range . }}
+          {{ range .courses }}
           <li>
-            <i class="fa-li fas fa-award"></i>
+            <i class="fa-li fas fa-graduation-cap"></i>
             <div class="description">
-              <p class="course">{{ .award }}{{ with .year }}, {{ . }}{{ end }}</p>
-              <p class="institution">{{ .organization }}</p>
+              <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
+              <p class="institution">{{ .institution }}</p>
             </div>
           </li>
           {{ end }}

@@ -346,12 +346,12 @@ body.person-modal-lock {
 // (Bootstrap only offers whole columns). Desktop only; mobile keeps stacking.
 @media (min-width: 768px) {
   .about-col-left {
-    flex: 0 0 54.1667%;
-    max-width: 54.1667%;
-  }
-  .about-col-right {
     flex: 0 0 45.8333%;
     max-width: 45.8333%;
+  }
+  .about-col-right {
+    flex: 0 0 54.1667%;
+    max-width: 54.1667%;
   }
 }
 

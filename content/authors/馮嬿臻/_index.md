@@ -34,7 +34,10 @@ education:
     - course: M.S. Epidemiology and Preventive Medicine
       institution: National Taiwan University
       year: 2012
-    - course: B.S. Public Health / Biochemical Science and Technology (dual major)
+    - course: B.S. Public Health
+      institution: National Taiwan University
+      year: 2011
+    - course: B.S. Biochemical Science and Technology
       institution: National Taiwan University
       year: 2011
 
@@ -43,15 +46,9 @@ awards:
   - award: Yushan Young Scholar
     organization: Ministry of Education, Taiwan
     year: '2022–2027'
-  - award: Innovation Fellowship
-    organization: Vertex Pharmaceuticals
-    year: '2020–2021'
-  - award: Early Career Investigator Award
-    organization: World Congress of Psychiatric Genetics
-    year: '2019'
-  - award: Reviewer's Choice Award
-    organization: American Society of Human Genetics
-    year: '2016'
+  - award: Ta-You Wu Memorial Award
+    organization: National Science and Technology Council, Taiwan
+    year: '2027'
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
