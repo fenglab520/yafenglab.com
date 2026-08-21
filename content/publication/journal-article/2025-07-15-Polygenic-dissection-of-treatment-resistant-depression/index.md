@@ -1,7 +1,7 @@
 ---
 title: "Polygenic dissection of treatment-resistant depression with proxy phenotypes in the UK Biobank"
 authors:
-- Wang, L.-H., Shih, M.-Y., Lin, Y.-F., Kuo, P.-H., & Feng, Y. A.*
+- Wang, L.-H., Shih, M.-Y., Lin, Y.-F., Kuo, P.-H., & Feng, Y.-C. A.*
 
 #author_notes:
 

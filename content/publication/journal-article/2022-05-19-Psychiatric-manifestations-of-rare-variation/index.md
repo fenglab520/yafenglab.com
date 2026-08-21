@@ -1,7 +1,7 @@
 ---
 title: "Psychiatric manifestations of rare variation in medically actionable genes: a PheWAS approach"
 authors:
-- Feng, Y. A.*, Stanaway, I. B., Connolly, J. J., Denny, J. C., Luo, Y., Weng, C., Wei, W.-Q., Weiss, S. T., Karlson, E. W., & Smoller, J. W.*
+- Feng, Y.-C. A.*, Stanaway, I. B., Connolly, J. J., Denny, J. C., Luo, Y., Weng, C., Wei, W.-Q., Weiss, S. T., Karlson, E. W., & Smoller, J. W.*
 
 author_notes:
 - 

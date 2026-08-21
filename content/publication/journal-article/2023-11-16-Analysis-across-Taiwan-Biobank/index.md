@@ -1,7 +1,7 @@
 ---
 title: "Analysis across Taiwan Biobank, Biobank Japan and UK Biobank identifies hundreds of novel loci for 36 quantitative traits"
 authors:
-- Chen, C. Y.*, Chen, T. T., Feng, Y. A.*, Yu, M., Lin, S. C., Longchamps, R., Wang, S. H., Hsu, Y. H., Yang, H. I., Kuo, P. H., Daly, M. J., Chen, W. J., Huang, H.*, Ge, T.*, & Lin, Y. F.*
+- Chen, C. Y.*, Chen, T. T., Feng, Y.-C. A.*, Yu, M., Lin, S. C., Longchamps, R., Wang, S. H., Hsu, Y. H., Yang, H. I., Kuo, P. H., Daly, M. J., Chen, W. J., Huang, H.*, Ge, T.*, & Lin, Y. F.*
 
 #author_notes:
 

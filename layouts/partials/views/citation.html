@@ -1,0 +1,51 @@
+{{ $item := .item }}
+
+{{/* Local override: link the article TITLE directly to the paper (DOI, else an
+     explicit PDF/source URL, else the internal page) and open it in a new tab.
+     The separate "DOI" button beneath each item is removed. */}}
+{{ $paper_url := $item.RelPermalink }}
+{{ $paper_target := "" }}
+{{ if $item.Params.doi }}
+  {{ $paper_url = printf "https://doi.org/%s" $item.Params.doi }}
+  {{ $paper_target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ else if $item.Params.url_pdf }}
+  {{ $paper_url = $item.Params.url_pdf }}
+  {{ $paper_target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ else if $item.Params.url_source }}
+  {{ $paper_url = $item.Params.url_source }}
+  {{ $paper_target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ end }}
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  {{/* APA Style */}}
+  {{ if eq (site.Params.publications.citation_style | default "apa") "apa" }}
+
+  <span class="article-metadata li-cite-author">
+    {{ partial "page_metadata_authors" $item }}
+  </span>
+  ({{- $item.Date.Format "2006" -}}).
+  <a href="{{ $paper_url }}" {{ $paper_target | safeHTMLAttr }}>{{ $item.Title }}</a>.
+  {{ if $item.Params.publication_short }}
+    {{- $item.Params.publication_short | markdownify -}}.
+  {{ else if $item.Params.publication }}
+    {{- $item.Params.publication | markdownify -}}.
+  {{ end }}
+
+  {{/* MLA Style */}}
+  {{ else }}
+
+  <span class="article-metadata li-cite-author">
+    {{ partial "page_metadata_authors" $item }}.
+  </span>
+  <a href="{{ $paper_url }}" {{ $paper_target | safeHTMLAttr }}>{{ $item.Title }}</a>.
+  {{ if $item.Params.publication_short }}
+    {{- $item.Params.publication_short | markdownify -}},
+  {{ else if $item.Params.publication }}
+    {{- $item.Params.publication | markdownify -}},
+  {{ end }}
+  {{- $item.Date.Format "2006" -}}.
+
+  {{ end }}
+</div>

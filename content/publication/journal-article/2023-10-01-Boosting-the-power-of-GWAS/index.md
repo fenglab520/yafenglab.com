@@ -1,7 +1,7 @@
 ---
 title: "Boosting the power of genome-wide association studies within and across ancestries by using polygenic scores"
 authors:
-- Campos, A. I., Namba, S., Lin, S. C., Nam, K., Sidorenko, J., Wang, H., Kamatani, Y., Biobank Japan Project, Wang, L. H., Lee, S., Lin, Y. F., Feng, Y. A., Okada, Y., Visscher, P., & Yengo, L. 
+- Campos, A. I., Namba, S., Lin, S. C., Nam, K., Sidorenko, J., Wang, H., Kamatani, Y., Biobank Japan Project, Wang, L. H., Lee, S., Lin, Y. F., Feng, Y.-C. A., Okada, Y., Visscher, P., & Yengo, L. 
 
 #author_notes:
 

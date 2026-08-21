@@ -1,7 +1,7 @@
 ---
 title: "Genetic regulation of methylation across East Asian and European populations"
 authors:
-- Liu, R., Chen, T.-T., Xia, Y., Lin, S.-C., Ge, T., Chen, C.-Y.*, Feng, Y. A.*, Huang, H.*, & Lin, Y.-F.*
+- Liu, R., Chen, T.-T., Xia, Y., Lin, S.-C., Ge, T., Chen, C.-Y.*, Feng, Y.-C. A.*, Huang, H.*, & Lin, Y.-F.*
 
 #author_notes:
 

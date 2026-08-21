@@ -1,7 +1,7 @@
 ---
 title: "Taiwan Biobank: a rich biomedical research database of the Taiwanese population"
 authors:
-- Feng, Y. A.*, Chen, C. Y., Chen, T. T., Kuo, P. H., Hsu, Y. H., Yang, H. I., Chen, W. J., Shen, C. Y., Ge, T., Huang, H., Lin, Y. F.*
+- Feng, Y.-C. A.*, Chen, C. Y., Chen, T. T., Kuo, P. H., Hsu, Y. H., Yang, H. I., Chen, W. J., Shen, C. Y., Ge, T., Huang, H., Lin, Y. F.*
 
 author_notes:
 - 

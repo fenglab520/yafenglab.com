@@ -1,7 +1,7 @@
 ---
 title: "Ultra-Rare Genetic Variation in the Epilepsies: A Whole-Exome Sequencing Study of 17,606 Individuals"
 authors:
-- Feng, Y. A., Howrigan, D. P., Abbott, L. E., Tashman, K., Cerrato, F., Singh, T., ..., Daly, M. J., Lander, E. S., Lowenstein, D. H., Goldstein, D., Lerche, H., Berkovic, S. F., & Neale, B. M. (Epi25 Collaborative)
+- Feng, Y.-C. A., Howrigan, D. P., Abbott, L. E., Tashman, K., Cerrato, F., Singh, T., ..., Daly, M. J., Lander, E. S., Lowenstein, D. H., Goldstein, D., Lerche, H., Berkovic, S. F., & Neale, B. M. (Epi25 Collaborative)
 
 author_notes:
 - 

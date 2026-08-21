@@ -6,7 +6,8 @@
 
 {{- $taxonomy := "authors" }}
 {{- $link_authors := ne $.Type "publication" -}}
-{{- $pi_name := "Feng, Y. A." -}}
+{{/* PI name variants to bold in publication author lists. */}}
+{{- $pi_names := slice "Feng, Y. A." "Feng, Y.-C. A." -}}
 {{ if .Param $taxonomy }}
   {{ range $index, $value := (.GetTerms $taxonomy) }}
     {{- /* Highlight the author's name? */ -}}
@@ -20,7 +21,9 @@
       {{- else -}}
         {{- $name := .LinkTitle -}}
         {{- if not $link_authors -}}
-          {{- $name = replace $name $pi_name (printf "<u><strong>%s</strong></u>" $pi_name) -}}
+          {{- range $pi_names -}}
+            {{- $name = replace $name . (printf "<u><strong>%s</strong></u>" .) -}}
+          {{- end -}}
         {{- end -}}
         {{ $name | safeHTML }}
       {{- end -}}

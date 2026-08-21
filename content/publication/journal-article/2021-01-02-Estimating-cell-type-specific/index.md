@@ -1,7 +1,7 @@
 ---
 title: "Estimating cell-type-specific DNA methylation effects in heterogeneous cellular populations"
 authors:
-- Feng, Y. A.*, Guo, Y., Pain, L., Lathrop, G. M., Laprise, C., Moffatt, M. F., Cookson, W. O., & Liang, L.*
+- Feng, Y.-C. A.*, Guo, Y., Pain, L., Lathrop, G. M., Laprise, C., Moffatt, M. F., Cookson, W. O., & Liang, L.*
 
 author_notes:
 - 

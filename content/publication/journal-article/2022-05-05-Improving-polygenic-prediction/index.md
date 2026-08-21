@@ -1,7 +1,7 @@
 ---
 title: "Improving polygenic prediction in ancestrally diverse populations"
 authors:
-- Ruan, Y., Lin, Y.-F., Feng, Y. A., Chen, C.-Y., Lam, M., Guo, Z., Stanley Global Asia Initiatives, He, L., Sawa, A., Martin, A. R., Qin, S., Huang, H., & Ge, T. 
+- Ruan, Y., Lin, Y.-F., Feng, Y.-C. A., Chen, C.-Y., Lam, M., Guo, Z., Stanley Global Asia Initiatives, He, L., Sawa, A., Martin, A. R., Qin, S., Huang, H., & Ge, T. 
 
 author_notes:
 - 

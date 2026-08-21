@@ -1,7 +1,7 @@
 ---
 title: "Pleiotropy and Cross-Disorder Genetics Among Psychiatric Disorders"
 authors:
-- Lee, P. H., Feng, Y. A., & Smoller, J. W. 
+- Lee, P. H., Feng, Y.-C. A., & Smoller, J. W. 
 
 author_notes:
 - 

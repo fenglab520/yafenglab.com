@@ -1,7 +1,7 @@
 ---
 title: "Polygenic prediction via Bayesian regression and continuous shrinkage priors"
 authors:
-- Ge, T., Chen, C.-Y., Ni, Y., Feng, Y. A., & Smoller, J. W.
+- Ge, T., Chen, C.-Y., Ni, Y., Feng, Y.-C. A., & Smoller, J. W.
 
 author_notes:
 - 

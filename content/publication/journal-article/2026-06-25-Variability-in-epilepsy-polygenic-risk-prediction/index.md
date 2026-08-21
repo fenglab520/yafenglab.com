@@ -1,7 +1,7 @@
 ---
 title: "Variability in epilepsy polygenic risk prediction across Taiwanese population and clinical cohorts"
 authors:
-- Ke, Y.-S., Tsai, M.-H., Ho, C.-R., Chou, C.-Y., Chen, H.-H., Stevelink, R., ..., Sung, S.-F., Lee, M.-C., Chen, J.-T., & Feng, Y. A.*
+- Ke, Y.-S., Tsai, M.-H., Ho, C.-R., Chou, C.-Y., Chen, H.-H., Stevelink, R., ..., Sung, S.-F., Lee, M.-C., Chen, J.-T., & Feng, Y.-C. A.*
 
 #author_notes:
 

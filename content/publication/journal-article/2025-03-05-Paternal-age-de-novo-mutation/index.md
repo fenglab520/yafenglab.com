@@ -1,7 +1,7 @@
 ---
 title: "Paternal age, de novo mutation, and age at onset among co-affected schizophrenia sib-pairs: whole-genome sequencing in multiplex families"
 authors:
-- Feng, Y. A., Chen, W. J., Lin, M. C., Hsu, J. S., Cheng, C. F., Liu, C. H., Hwu, H. G., Huang, Y. T., Lu, T. P., & Wang, S. H.
+- Feng, Y.-C. A., Chen, W. J., Lin, M. C., Hsu, J. S., Cheng, C. F., Liu, C. H., Hwu, H. G., Huang, Y. T., Lu, T. P., & Wang, S. H.
 
 #author_notes:
 
