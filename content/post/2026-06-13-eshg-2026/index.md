@@ -5,7 +5,7 @@ reading_time: false
 authors:
     -
 ---
-Proud of Yi-Syuan Ke for delivering a talk on our work dissecting depression heterogeneity with Transformer architecture.
+Proud of Yi-Syuan Ke for delivering a talk on our work dissecting depression heterogeneity with Transformer architecture
 <!--more-->
 
 ![image](eshg_all.jpg)

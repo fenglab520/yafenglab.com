@@ -49,7 +49,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Feng Lab. Created by Mu-Yi Shih.'
+    notice: '© {year} Feng Lab · National Taiwan University'
     license:
       enable: false
       allow_derivatives: false

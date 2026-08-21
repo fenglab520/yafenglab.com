@@ -1,5 +1,5 @@
 ---
-title: Taiwan Biobank Cohort Paper
+title: Taiwan’s Population Genomic Research Resource
 date: 2022-11-09
 reading_time: false
 authors:
