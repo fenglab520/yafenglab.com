@@ -30,6 +30,61 @@
 })();
 </script>
 
+{{/* Scroll-reveal: fade-and-rise elements into view as the user scrolls to
+     them (styles in custom.scss). Progressive enhancement — the classes are
+     added here at runtime, so nothing is hidden without JS. */}}
+<script>
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var targets = document.querySelectorAll([
+    {{/* .hero-title is deliberately NOT animated: the fade/rise on the large
+         serif headline reads as an unwanted font-size zoom. */}}
+    '.hero-lead', '.hero-media-figure', '.cta-btns',
+    '.section-heading', '.see-all', '.gallery-grid',
+    '.news-min', '.view-compact', '.view-citation', '.people-person',
+    '.article-style > p, .article-style > h2, .article-style > h3, .article-style > ul'
+  ].join(','));
+  targets.forEach(function (el) {
+    if (el.closest('.post-modal') || el.closest('.person-modal')) return; // leave pop-ups alone
+    // Don't animate article-style children nested inside listing cards — the
+    // card itself already animates (double-targeting left them stuck hidden).
+    if (el.matches('.article-style > *') &&
+        el.closest('.view-compact, .view-citation, .news-min, .people-person')) return;
+    el.classList.add('sr-reveal');
+  });
+  var io = new IntersectionObserver(function (entries) {
+    // Stagger only within a batch revealed at the same moment (e.g. the group
+    // initially in view, or several items entering after a jump). Items that
+    // scroll in one at a time get no delay, so gradual scrolling feels snappy.
+    // People cards are grouped by row: cards sharing a vertical position get
+    // the same delay so each row appears together, not left-to-right.
+    var batch = 0;
+    var rowTops = [];
+    entries.forEach(function (e) {
+      // Reveal when entering the viewport — or when already above it (fast
+      // scrolling and anchor jumps can skip the in-view frames entirely).
+      if (e.isIntersecting || e.boundingClientRect.top < 0) {
+        var delay;
+        if (e.target.matches('.people-person')) {
+          var top = Math.round(e.boundingClientRect.top / 40); // bucket rows
+          var idx = rowTops.indexOf(top);
+          if (idx === -1) { idx = rowTops.length; rowTops.push(top); }
+          delay = Math.min(idx * 70, 350);
+        } else {
+          delay = Math.min(batch * 70, 350);
+          batch += 1;
+        }
+        e.target.style.transitionDelay = delay + 'ms';
+        e.target.classList.add('sr-in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+  document.querySelectorAll('.sr-reveal').forEach(function (el) { io.observe(el); });
+})();
+</script>
+
 {{/* Compact-view news post pop-up: open/close behaviour. Emitted site-wide (not
      from compact.html) because that view's per-page guard uses $page.Store, which
      is shared across paginated renders — so the script would land only on page 1

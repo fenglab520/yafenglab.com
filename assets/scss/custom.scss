@@ -463,6 +463,29 @@ body.post-modal-lock {
   margin: 0;
 }
 
+// Scroll-reveal: elements fade in and rise as they enter the viewport.
+// Classes are added by JS (see site_footer.html), so content stays fully
+// visible when JS is unavailable; reduced-motion users skip the effect.
+.sr-reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+.sr-reveal.sr-in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sr-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 // Minimal news list (home "Latest News"): text-only rows, date + title +
 // one-line summary, separated by hairline dividers.
 .news-min {
