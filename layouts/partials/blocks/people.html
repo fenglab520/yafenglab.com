@@ -45,7 +45,7 @@
       </div>
     {{end}}
 
-    {{ if $is_previous }}<div class="col-12"><div class="pm-ledger sr-reveal-skip">{{ end }}
+    {{ if $is_previous }}<div class="col-12"><div class="pm-ledger">{{ end }}
     {{ range $query }}
       {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
       {{/* Get link to user's profile page. */}}
