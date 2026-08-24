@@ -39,10 +39,13 @@
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   // No scroll-reveal on:
   //  - Publications pages (the citation list reads better appearing at once)
+  //  - author profile pages (/author/<slug>/)
   //  - individual post-detail pages (/post/<slug>/, but NOT the /post/ listing
   //    or its /post/page/N/ pages, which keep the reveal)
   var _path = location.pathname;
-  if (/^\/publication([\/-]|$)/.test(_path) || /^\/post\/(?!page\/).+/.test(_path)) return;
+  if (/^\/publication([\/-]|$)/.test(_path) ||
+      /^\/author\//.test(_path) ||
+      /^\/post\/(?!page\/).+/.test(_path)) return;
   var targets = document.querySelectorAll([
     {{/* .hero-title is deliberately NOT animated: the fade/rise on the large
          serif headline reads as an unwanted font-size zoom. */}}
