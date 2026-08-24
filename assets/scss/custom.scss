@@ -87,6 +87,61 @@ body[data-target="#navbar-main"] #navbar-main .navbar-nav .nav-item:first-child 
   font-family: "Karla", sans-serif;
 }
 
+// Member (photo card) names: weight 400.
+.people-person .portrait-title h2,
+.people-person .portrait-title h2 a {
+  font-weight: 400;
+}
+
+// Previous Members: a two-column ledger — name on the left, role right-aligned,
+// hairline dividers between rows. Names stay clickable to the profile pop-up.
+.pm-ledger {
+  columns: 2;
+  column-gap: 3rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.pm-ledger__row {
+  break-inside: avoid;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #ececf0;
+}
+.pm-ledger__name {
+  color: #2b3a55;
+  font-weight: 500; // medium ("half-bold")
+  // A bit smaller than the active-member card names (theme: 1rem).
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.pm-ledger__name:hover {
+  text-decoration: underline;
+}
+.pm-ledger__role {
+  color: #808894;
+  // A bit smaller than the active-member role text (theme: 0.7rem).
+  font-size: 0.62rem;
+  white-space: nowrap;
+}
+// Single column on narrow screens.
+@media (max-width: 575.98px) {
+  .pm-ledger {
+    columns: 1;
+  }
+}
+
+// Space each member-type group above its heading — but only between groups, not
+// before the first one (which would add an unwanted gap right after the "Meet
+// the Team" title). A group heading directly following a member card is a
+// "not-first" heading. 18px matches the title→first-heading gap for a
+// consistent rhythm.
+.people-person + .people-group-heading {
+  margin-top: 18px;
+}
+
 // PI personal (author) page: role + affiliation lines in Karla (body font),
 // not the Fraunces heading face.
 #profile .portrait-title h3 {

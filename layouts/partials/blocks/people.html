@@ -27,6 +27,9 @@
   {{ range $block.content.user_groups }}
     {{ $group := . }}
     {{ $is_pi := eq $group "Principal Investigator" }}
+    {{/* Previous Members render compact: name + role only, no photo, no pop-up,
+         packed into a multi-column grid. */}}
+    {{ $is_previous := eq $group "Previous Members" }}
     {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
 
     {{/* Sort */}}
@@ -37,11 +40,12 @@
     {{ $query = sort $query $sort_by $sort_order }}
 
     {{if $query | and (gt (len $block.content.user_groups) 1) }}
-      <div class="col-md-12">
+      <div class="col-md-12 people-group-heading">
         <h2 class="mb-4">{{ $group | markdownify }}</h2>
       </div>
     {{end}}
 
+    {{ if $is_previous }}<div class="col-12"><div class="pm-ledger sr-reveal-skip">{{ end }}
     {{ range $query }}
       {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
       {{/* Get link to user's profile page. */}}
@@ -63,6 +67,46 @@
 
       {{ $modal_id := printf "person-modal-%s" .File.UniqueID }}
 
+      {{ if $is_previous }}
+        <div class="pm-ledger__row">
+          <a href="#" class="person-modal-trigger pm-ledger__name" data-person-modal="{{ $modal_id }}" role="button" aria-haspopup="dialog">{{ .Title }}</a>
+          {{ if and $show_role .Params.role }}<span class="pm-ledger__role">{{ .Params.role | markdownify | emojify }}</span>{{ end }}
+
+          {{/* Same pop-up profile as the other members */}}
+          <div class="person-modal" id="{{ $modal_id }}" aria-hidden="true">
+            <div class="person-modal__overlay" data-person-modal-close></div>
+            <div class="person-modal__dialog" role="dialog" aria-modal="true" aria-label="{{ .Title }}">
+              <button type="button" class="person-modal__close" data-person-modal-close aria-label="Close">&times;</button>
+              <div class="person-modal__body">
+                {{ if $src }}<img class="avatar {{ $shape_class }}" src="{{ $src }}" alt="{{ .Title }}">{{ end }}
+                <h2 class="person-modal__name">{{ .Title }}</h2>
+                {{ with .Params.role }}<div class="person-modal__role">{{ . | markdownify | emojify }}</div>{{ end }}
+                {{ range .Params.organizations }}<div class="person-modal__org">{{ .name }}</div>{{ end }}
+                {{ partial "social_links" . }}
+                {{ with .Content }}<div class="person-modal__bio article-style">{{ . }}</div>{{ end }}
+                <div class="person-modal__meta">
+                  {{ with .Params.interests }}
+                    <div class="person-modal__section">
+                      <div class="section-subheading">{{ i18n "interests" | default "Interests" | markdownify }}</div>
+                      <ul class="ul-interests mb-0">{{ range . }}<li>{{ . | markdownify | emojify }}</li>{{ end }}</ul>
+                    </div>
+                  {{ end }}
+                  {{ with .Params.education }}
+                    <div class="person-modal__section">
+                      <div class="section-subheading">{{ i18n "education" | default "Education" | markdownify }}</div>
+                      <ul class="ul-edu fa-ul mb-0">
+                        {{ range .courses }}
+                          <li><i class="fa-li fas fa-graduation-cap"></i><div class="description"><p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p><p class="institution">{{ .institution }}</p></div></li>
+                        {{ end }}
+                      </ul>
+                    </div>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{ else }}
       <div class="col-12 col-sm-auto people-person">
         {{ if $src }}
           {{ if $is_pi }}
@@ -122,7 +166,9 @@
           </div>
         {{ end }}
       </div>
+      {{ end }}
     {{ end }}
+    {{ if $is_previous }}</div></div>{{ end }}
   {{ end }}
 </div>
 
