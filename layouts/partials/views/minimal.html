@@ -54,41 +54,7 @@
     </div>
   </div>
 
-  {{ if not ($page.Store.Get "post_modal_js") }}
-    {{ $page.Store.Set "post_modal_js" true }}
-    <script>
-    (function () {
-      if (window.__postModalInit) return;
-      window.__postModalInit = true;
-      // The modal image is lazy and lives in a display:none modal, so the browser
-      // won't fetch it until the modal opens. Warm it into cache as soon as the
-      // user hovers/focuses/taps the trigger, so it's ready by the time they click.
-      var warmed = {};
-      function warm(id){
-        if(!id || warmed[id]) return;
-        var m=document.getElementById(id); if(!m) return;
-        var img=m.querySelector('.post-modal__img'); if(!img) return;
-        var src=img.getAttribute('src'); if(!src) return;
-        warmed[id]=true;
-        var pre=new Image(); pre.src=src;
-      }
-      ['mouseover','focusin','touchstart'].forEach(function(ev){
-        document.addEventListener(ev, function(e){
-          var t=e.target.closest && e.target.closest('.post-modal-trigger');
-          if(t) warm(t.getAttribute('data-post-modal'));
-        }, {passive:true});
-      });
-      function closeAll(){
-        document.querySelectorAll('.post-modal.is-open').forEach(function (m){ m.classList.remove('is-open'); m.setAttribute('aria-hidden','true'); });
-        document.body.classList.remove('post-modal-lock');
-      }
-      document.addEventListener('click', function (e){
-        var t=e.target.closest('.post-modal-trigger');
-        if(t){ e.preventDefault(); var m=document.getElementById(t.getAttribute('data-post-modal')); if(m){ m.classList.add('is-open'); m.setAttribute('aria-hidden','false'); document.body.classList.add('post-modal-lock'); } return; }
-        if(e.target.closest('[data-post-modal-close]')) closeAll();
-      });
-      document.addEventListener('keydown', function (e){ if(e.key==='Escape') closeAll(); });
-    })();
-    </script>
-  {{ end }}
+  {{/* Open/close behaviour is emitted site-wide from partials/site_footer.html
+       (not here) — a per-view copy would set the init guard before the footer
+       script runs and skip its modal hoisting. See note there. */}}
 {{ end }}

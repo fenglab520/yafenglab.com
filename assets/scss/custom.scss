@@ -322,6 +322,12 @@ body.person-modal-lock {
 .person-modal__bio {
   text-align: left;
   margin: 1.1rem 0 0.3rem;
+  // Match the PI profile page (1rem): the People section base font is smaller,
+  // so without this the pop-up bio inherits ~0.8rem.
+  font-size: 1rem;
+}
+.person-modal__section .ul-edu li {
+  font-size: 1rem; // match Education size on the PI profile page
 }
 .person-modal__meta {
   text-align: left;

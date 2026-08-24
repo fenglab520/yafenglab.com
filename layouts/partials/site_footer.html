@@ -39,6 +39,12 @@
 (function () {
   if (window.__postModalInit) return;
   window.__postModalInit = true;
+  // Hoist every modal to <body>: on the home page the markup is emitted inside
+  // a landing-page section, whose stacking context would otherwise let later
+  // sections (e.g. the Lab Life gallery) paint over the open modal.
+  document.querySelectorAll('.post-modal').forEach(function (m) {
+    document.body.appendChild(m);
+  });
   // The modal image is lazy and lives in a display:none modal, so the browser
   // won't fetch it until the modal opens. Warm it into cache as soon as the
   // user hovers/focuses/taps the trigger, so it's ready by the time they click.
