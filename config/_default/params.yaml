@@ -49,7 +49,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Feng Lab · National Taiwan University'
+    notice: '© {year} Feng Lab | National Taiwan University'
     license:
       enable: false
       allow_derivatives: false

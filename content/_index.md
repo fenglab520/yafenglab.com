@@ -18,6 +18,7 @@ sections:
       title: 
       image:
         filename: group_photo.jpeg
+      media_caption: 馮嬿臻老師實驗室｜台大公衛學院健統所
       
       text: <span style="font-size:0.95em"> We are a computational research group at [National Taiwan University](https://www.ntu.edu.tw) dedicated to studying the genetic epidemiology of human complex traits, with a focus on the susceptibility, severity, and progression of neuro-psychiatric disorders. Our work extends to analyses across diverse ancestries and multi-omics data, aiming to translate genomic discoveries into better healthcare and public health outcomes. </span>
   - block: collection

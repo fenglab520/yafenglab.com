@@ -436,6 +436,33 @@ body.post-modal-lock {
   text-align: left;
 }
 
+// Caption on the hero group photo (home page): the lab's Chinese identity as
+// a translucent bar overlaid on the image's bottom edge.
+.hero-media-figure {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+.hero-media-figure img {
+  display: block;
+}
+.hero-media-figure__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(43, 58, 85, 0.72);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 0.4rem 0.6rem;
+  text-align: center;
+}
+.hero-media-figure__caption p {
+  margin: 0;
+}
+
 // Minimal news list (home "Latest News"): text-only rows, date + title +
 // one-line summary, separated by hairline dividers.
 .news-min {
