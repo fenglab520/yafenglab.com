@@ -468,11 +468,13 @@ body.post-modal-lock {
 // visible when JS is unavailable; reduced-motion users skip the effect.
 .sr-reveal {
   opacity: 0;
-  transform: translateY(26px);
+  transform: translateY(18px);
   transition:
-    opacity 0.65s cubic-bezier(0.22, 0.61, 0.36, 1),
-    transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
-  will-change: opacity, transform;
+    opacity 0.55s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
+  // NOTE: no `will-change` here — it would pin a compositing layer on every
+  // animated element for the life of the page and cause scroll jank. The
+  // browser promotes layers on its own for the brief transition.
 }
 .sr-reveal.sr-in {
   opacity: 1;

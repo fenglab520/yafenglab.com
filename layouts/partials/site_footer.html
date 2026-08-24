@@ -37,6 +37,9 @@
 (function () {
   if (!('IntersectionObserver' in window)) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // No scroll-reveal on the Publications pages — the citation list reads
+  // better appearing at once.
+  if (/^\/publication([\/-]|$)/.test(location.pathname)) return;
   var targets = document.querySelectorAll([
     {{/* .hero-title is deliberately NOT animated: the fade/rise on the large
          serif headline reads as an unwanted font-size zoom. */}}
@@ -78,6 +81,15 @@
         e.target.style.transitionDelay = delay + 'ms';
         e.target.classList.add('sr-in');
         io.unobserve(e.target);
+        // Once the animation is over, strip all traces (classes + inline
+        // delay) so revealed elements carry zero styling/compositing cost
+        // during further scrolling.
+        (function (el) {
+          setTimeout(function () {
+            el.classList.remove('sr-reveal', 'sr-in');
+            el.style.transitionDelay = '';
+          }, delay + 650);
+        })(e.target);
       }
     });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
