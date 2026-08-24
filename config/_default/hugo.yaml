@@ -7,7 +7,7 @@ title: Feng Lab # Website name
 
 # Include early-online / in-press publications whose date is slightly in the future.
 buildFuture: true
-baseURL: 'https://lab.muxxi.stream' # Website URL
+baseURL: 'https://yafenglab.com/' # Website URL
 
 ############################
 ## LANGUAGE
