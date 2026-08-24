@@ -37,14 +37,17 @@
 (function () {
   if (!('IntersectionObserver' in window)) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  // No scroll-reveal on the Publications pages — the citation list reads
-  // better appearing at once.
-  if (/^\/publication([\/-]|$)/.test(location.pathname)) return;
+  // No scroll-reveal on:
+  //  - Publications pages (the citation list reads better appearing at once)
+  //  - individual post-detail pages (/post/<slug>/, but NOT the /post/ listing
+  //    or its /post/page/N/ pages, which keep the reveal)
+  var _path = location.pathname;
+  if (/^\/publication([\/-]|$)/.test(_path) || /^\/post\/(?!page\/).+/.test(_path)) return;
   var targets = document.querySelectorAll([
     {{/* .hero-title is deliberately NOT animated: the fade/rise on the large
          serif headline reads as an unwanted font-size zoom. */}}
     '.hero-lead', '.hero-media-figure', '.cta-btns',
-    '.section-heading', '.see-all', '.gallery-grid',
+    '.section-heading', '.people-group-heading', '.see-all', '.gallery-grid',
     '.news-min', '.view-compact', '.view-citation', '.people-person', '.pm-ledger',
     '.article-style > p, .article-style > h2, .article-style > h3, .article-style > ul'
   ].join(','));
