@@ -5,7 +5,7 @@ reading_time: false
 authors:
     -
 ---
-New paper published in *Journal of Affective Disorders*: Polygenic dissection of treatment-resistant depression with proxy phenotypes in the UK Biobank
+“Polygenic dissection of treatment-resistant depression with proxy phenotypes in the UK Biobank” published in *Journal of Affective Disorders*
 <!--more-->
 For about one in three people with major depressive disorder (MDD), standard antidepressant treatments don’t work. This form, called treatment resistant depression (TRD), leaves patients struggling despite trying at least two different medications.
 

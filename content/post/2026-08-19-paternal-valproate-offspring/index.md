@@ -5,7 +5,7 @@ reading_time: false
 authors:
     -
 ---
-New paper published in *Neurology*: Paternal Valproate Exposure and Offspring Neurodevelopmental Outcomes
+“Paternal Valproate Exposure and Offspring Neurodevelopmental Outcomes” published in *Neurology*
 <!--more-->
 In collaboration with CGMH and NHRI, this study looks at whether paternal exposure to valproate (a common and effective drug for epilepsy and bipolar disorder etc.) during spermatogenesis would increase the risk of NDD in their children, using the NHIRD database in Taiwan.
 

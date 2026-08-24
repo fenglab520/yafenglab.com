@@ -5,7 +5,7 @@ reading_time: false
 authors:
     -
 ---
-New paper published in *Nature Communications*: Genetic regulation of methylation across East Asian and European populations
+“Genetic regulation of methylation across East Asian and European populations” published in *Nature Communications*
 <!--more-->
 公衛學院健統所馮嬿臻老師團隊與國衛院、美國 Broad Institute 合作，發表迄今最大規模的東亞族群 DNA 甲基化遺傳調控研究，刻畫其與複雜疾病風險的關聯。
 

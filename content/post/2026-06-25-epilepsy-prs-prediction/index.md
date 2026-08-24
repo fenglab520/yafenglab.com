@@ -5,7 +5,7 @@ reading_time: false
 authors:
     -
 ---
-New paper published in *Epilepsia*: Variability in epilepsy polygenic risk prediction across Taiwanese population and clinical cohorts
+“Variability in epilepsy polygenic risk prediction across Taiwanese population and clinical cohorts” published in *Epilepsia*
 <!--more-->
 Our study examined whether polygenic risk scores—measures that combine the effects of many genetic variants—can help identify people at higher risk of epilepsy in more than 600,000 Taiwanese individuals. We found that these genetic scores performed best in carefully characterized clinical samples and were generally more informative for people with earlier-onset epilepsy, particularly genetic generalized epilepsy (GGE). However, their predictive power varied substantially depending on the type of epilepsy and how cases were identified, highlighting the need for caution before using them in clinical practice. Our findings also underscore the importance of improving genetic studies in diverse populations and combining genetic information with richer clinical data to make precision medicine for epilepsy more accurate and equitable.
 
