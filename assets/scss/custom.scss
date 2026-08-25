@@ -264,15 +264,17 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
 }
 
 // Home hero title: navy, centered, medium weight, with a centered accent underline.
-// A hair of letter-spacing opens the wordmark up without distorting the Fraunces
-// glyphs (previously a scaleX(1.04) stretch, which subtly widened the letters).
+// Stretch the glyphs horizontally (like the Feng Lab logo wordmark) rather than
+// spacing the letters apart.
 .hero-title {
   color: #2b3a55;
   font-weight: 400;
   text-align: center;
-  letter-spacing: 0.01em;
+  transform: scaleX(1.04);
+  transform-origin: center;
 }
-// Belt-and-braces: never let the hero title create horizontal page scroll.
+// The horizontal stretch can push the title box a few px past the viewport on
+// narrow screens — clip it at the hero section so it never creates page scroll.
 .home-section.wg-hero {
   overflow-x: clip;
 }
