@@ -117,43 +117,55 @@ body[data-target="#navbar-main"] #navbar-main .navbar-nav .nav-item:first-child 
   box-shadow: 0 10px 22px rgba(43, 58, 85, 0.18);
 }
 
-// Previous Members: a two-column ledger — name on the left, role right-aligned,
-// hairline dividers between rows. Names stay clickable to the profile pop-up.
-.pm-ledger {
-  columns: 2;
-  column-gap: 3rem;
+// Previous Members: avatar + name "chips" laid out in a three-column grid, names
+// left-aligned. Each chip is clickable and opens the same profile pop-up as the
+// active members. Chips fill their column so the rows line up cleanly.
+.pm-chips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem 1.2rem;
   max-width: 860px;
   margin: 0 auto;
 }
-.pm-ledger__row {
-  break-inside: avoid;
+.pm-chip {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 0.75rem;
-  padding: 0.55rem 0;
-  border-bottom: 1px solid #ececf0;
-}
-.pm-ledger__name {
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0; // let the name ellipsize instead of overflowing the chip
+  padding: 0.32rem 0.95rem 0.32rem 0.32rem;
+  background: #f4f4f4;
+  border-radius: 999px;
   color: #2b3a55;
   font-weight: 500; // medium ("half-bold")
-  // A bit smaller than the active-member card names (theme: 1rem).
-  font-size: 0.9rem;
+  font-size: 0.84rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.pm-chip:hover {
+  background: #e7edf0;
   text-decoration: none;
 }
-.pm-ledger__name:hover {
-  text-decoration: underline;
+.pm-chip__avatar {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
 }
-.pm-ledger__role {
-  color: #5b6675;
-  // A bit smaller than the active-member role text (theme: 0.7rem).
-  font-size: 0.62rem;
+.pm-chip__name {
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-// Single column on narrow screens.
-@media (max-width: 575.98px) {
-  .pm-ledger {
-    columns: 1;
+// Two columns on tablets, single column on phones.
+@media (max-width: 768px) {
+  .pm-chips {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .pm-chips {
+    grid-template-columns: 1fr;
   }
 }
 

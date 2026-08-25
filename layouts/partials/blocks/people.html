@@ -45,7 +45,7 @@
       </div>
     {{end}}
 
-    {{ if $is_previous }}<div class="col-12"><div class="pm-ledger">{{ end }}
+    {{ if $is_previous }}<div class="col-12"><div class="pm-chips">{{ end }}
     {{ range $query }}
       {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
       {{/* Get link to user's profile page. */}}
@@ -68,11 +68,12 @@
       {{ $modal_id := printf "person-modal-%s" .File.UniqueID }}
 
       {{ if $is_previous }}
-        <div class="pm-ledger__row">
-          <a href="#" class="person-modal-trigger pm-ledger__name" data-person-modal="{{ $modal_id }}" role="button" aria-haspopup="dialog">{{ .Title }}</a>
-          {{ if and $show_role .Params.role }}<span class="pm-ledger__role">{{ .Params.role | markdownify | emojify }}</span>{{ end }}
+        <a href="#" class="person-modal-trigger pm-chip" data-person-modal="{{ $modal_id }}" role="button" aria-haspopup="dialog" aria-label="View profile of {{ .Title }}">
+          {{ if $src }}<img class="pm-chip__avatar" src="{{ $src }}" alt="" loading="lazy">{{ end }}
+          <span class="pm-chip__name">{{ .Title }}</span>
+        </a>
 
-          {{/* Same pop-up profile as the other members */}}
+        {{/* Same pop-up profile as the other members */}}
           <div class="person-modal" id="{{ $modal_id }}" aria-hidden="true">
             <div class="person-modal__overlay" data-person-modal-close></div>
             <div class="person-modal__dialog" role="dialog" aria-modal="true" aria-label="{{ .Title }}">
@@ -105,7 +106,6 @@
               </div>
             </div>
           </div>
-        </div>
       {{ else }}
       <div class="col-12 col-sm-auto people-person">
         {{ if $src }}
