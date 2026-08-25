@@ -1,5 +1,7 @@
 ---
 title: Polygenic Risk Prediction for Epilepsy
+image:
+  focal_point: Center
 date: 2026-06-25
 reading_time: false
 authors:

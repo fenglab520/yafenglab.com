@@ -5,6 +5,6 @@ reading_time: false
 authors:
     -
 ---
-Ling-Hua’s Master’s thesis explored electronic health records in the UK Biobank to study the genetics of treatment resistant depression, revealing a significant polygenic basis and offering insights toward precision psychiatry.
+Ling-Hua’s Master’s thesis explored EHRs in the UK Biobank to study the genetics of treatment resistant depression, revealing a significant polygenic basis and insights toward precision psychiatry.
 <!--more-->
 恭喜齡嬅碩士畢業！

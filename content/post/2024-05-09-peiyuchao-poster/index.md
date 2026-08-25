@@ -1,5 +1,7 @@
 ---
 title: Best Poster Award
+image:
+  focal_point: Top
 date: 2024-05-09
 reading_time: false
 authors:
