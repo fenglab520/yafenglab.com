@@ -590,16 +590,17 @@ body.post-modal-lock {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: #fff;
+  // Light grey card on the white page, so each post reads as a distinct block.
+  background: #f4f6f9;
   border: 1px solid #e7e9ee;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(43, 58, 85, 0.08);
+  box-shadow: 0 4px 14px rgba(43, 58, 85, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .news-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(43, 58, 85, 0.16);
+  box-shadow: 0 12px 26px rgba(43, 58, 85, 0.14);
 }
 .news-card__media {
   display: block;
