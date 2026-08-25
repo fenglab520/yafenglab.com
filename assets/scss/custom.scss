@@ -208,11 +208,17 @@ body[data-target="#TableOfContents"] .wg-markdown .section-heading h1::after {
   display: none;
 }
 
-// Space between page content and the footer bar (content pages).
-// Only the content wrapper (not the title wrapper, which has .pt-3), so the
-// title-to-content gap is unaffected.
+// Standardize the gap between the last page content and the footer bar to 4rem
+// across every page type, so the footer sits a consistent distance below the
+// content everywhere (previously 54px on content pages, 75px on the home Lab
+// Life block, and a large 110px on the landing sections of People/Contact).
+//   - content pages (Research/News/Publications) use `.universal-wrapper`
+//   - landing pages (Home/People/Contact) end in a `.home-section` block
 body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
+}
+.home-section:last-of-type {
+  padding-bottom: 4rem;
 }
 
 // Site-wide content column width (centered, ~1120px). Applies to the navbar,
