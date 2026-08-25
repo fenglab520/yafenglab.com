@@ -8,13 +8,18 @@
   <div class="article-style">{{ . }}</div>
   {{ end }}
 
-  {{/* Local override: paginate the News section at 10 posts per page (the theme
-       default uses the global `paginate` setting, which also governs publications
-       and taxonomy lists — this keeps the change scoped to News). */}}
-  {{ $paginator := .Paginate .Data.Pages 10 }}
+  {{/* Local override: paginate the News section at 9 posts per page — exactly 3
+       rows of the card grid (the theme default uses the global `paginate`
+       setting, which also governs publications and taxonomy lists, so this keeps
+       the change scoped to News). */}}
+  {{ $view := $.Params.view | default "compact" }}
+  {{ $paginator := .Paginate .Data.Pages 9 }}
+  {{/* The card view renders Bootstrap columns, so wrap them in a grid row. */}}
+  {{ if eq $view "cards" }}<div class="row news-card-grid">{{ end }}
   {{ range $index, $item := $paginator.Pages }}
-    {{ partial "functions/render_view" (dict "page" $ "item" . "view" ($.Params.view | default "compact") "index" $index) }}
+    {{ partial "functions/render_view" (dict "page" $ "item" . "view" $view "index" $index) }}
   {{end}}
+  {{ if eq $view "cards" }}</div>{{ end }}
 
   {{ partial "pagination" . }}
 

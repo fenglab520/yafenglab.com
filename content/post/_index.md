@@ -3,7 +3,7 @@ title: News & Events
 subtitle: <br>
 
 # Listing view
-view: compact
+view: cards
 
 # Optional banner image (relative to `assets/media/` folder).
 banner:

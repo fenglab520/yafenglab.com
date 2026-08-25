@@ -577,6 +577,82 @@ body.post-modal-lock {
   }
 }
 
+// News page card grid: each post is an individual box — cropped 16:9 image,
+// date chip, Fraunces title, summary. (The home "Latest News" block keeps its
+// simple text list, which is a separate view.)
+.news-card-grid {
+  margin-top: 0.5rem;
+}
+.news-card-col {
+  margin-bottom: 1.75rem;
+}
+.news-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e7e9ee;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(43, 58, 85, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(43, 58, 85, 0.16);
+}
+.news-card__media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #eef1f5;
+}
+.news-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.news-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1.15rem 1.35rem;
+  flex: 1;
+}
+.news-card__date {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  color: #2b3a55;
+  background: rgba(143, 208, 208, 0.28);
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+}
+.news-card__title {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 1.15rem;
+  line-height: 1.22;
+}
+.news-card__title a {
+  color: #2b3a55;
+  text-decoration: none;
+}
+.news-card__title a:hover {
+  text-decoration: underline;
+}
+.news-card__summary {
+  color: #5b6675;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.news-card__summary p {
+  margin: 0;
+}
+
 // Minimal news list (home "Latest News"): text-only rows, date + title +
 // one-line summary, separated by hairline dividers.
 .news-min {
