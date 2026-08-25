@@ -276,7 +276,7 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
 // The title text is wrapped in **bold** markdown (-> <strong>, browser default
 // 700); dial that back to a slightly lighter semibold.
 .hero-title strong {
-  font-weight: 600;
+  font-weight: 650;
 }
 // The horizontal stretch can push the title box a few px past the viewport on
 // narrow screens — clip it at the hero section so it never creates page scroll.
