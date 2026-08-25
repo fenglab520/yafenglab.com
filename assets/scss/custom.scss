@@ -525,6 +525,12 @@ body.post-modal-lock {
   position: relative;
   display: inline-block;
   max-width: 100%;
+  // Gently softened frame: lightly rounded corners + a diffuse shadow that
+  // lifts the photo off the page. overflow:hidden clips the image and the
+  // caption bar to the rounded corners.
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(43, 58, 85, 0.22);
 }
 .hero-media-figure img {
   display: block;
