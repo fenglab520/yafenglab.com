@@ -100,6 +100,11 @@ body[data-target="#navbar-main"] #navbar-main .navbar-nav .nav-item:first-child 
 .people-person .portrait-title h2 a {
   font-weight: 400;
 }
+// Member role/position text: the accessible slate-navy grey (theme default was
+// a low-contrast rgba(0,0,0,.54)), matching the secondary text elsewhere.
+.people-person .portrait-title h3 {
+  color: #5b6675;
+}
 
 // Hover on a member card: the avatar lifts a touch with a soft shadow — a
 // gentle "this opens a profile" cue. (Transforming the avatar, not the card,
@@ -140,7 +145,7 @@ body[data-target="#navbar-main"] #navbar-main .navbar-nav .nav-item:first-child 
   text-decoration: underline;
 }
 .pm-ledger__role {
-  color: #808894;
+  color: #5b6675;
   // A bit smaller than the active-member role text (theme: 0.7rem).
   font-size: 0.62rem;
   white-space: nowrap;
@@ -394,7 +399,7 @@ body.person-modal-lock {
   color: #555;
 }
 .person-modal__org {
-  color: #808894;
+  color: #5b6675;
   margin-bottom: 0.4rem;
 }
 .person-modal__bio {
@@ -499,7 +504,7 @@ body.post-modal-lock {
   margin: 0 2rem 0.2rem 0;
 }
 .post-modal__date {
-  color: #808894;
+  color: #5b6675;
   font-size: 0.9rem;
   margin-bottom: 1.1rem;
 }
@@ -577,7 +582,7 @@ body.post-modal-lock {
   padding-top: 0.2rem;
 }
 .news-min__date {
-  color: #808894;
+  color: #5b6675;
   font-size: 0.75rem;
   margin-bottom: 0.15rem;
 }
