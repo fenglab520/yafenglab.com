@@ -580,26 +580,8 @@ body.post-modal-lock {
 // News page card grid: each post is an individual box — cropped 16:9 image,
 // date chip, Fraunces title, summary. (The home "Latest News" block keeps its
 // simple text list, which is a separate view.)
-// Full-width light-grey band behind the News card grid (mirrors the home page
-// grey blocks). It breaks out of the centered content column to span the
-// viewport, then re-pads its contents back to the ~1120px column so the cards
-// line up with the page title above.
-.news-grid-band {
-  background: #f4f4f4;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  padding-top: 2.6rem;
-  padding-bottom: 0.85rem;
-  padding-left: #{"max(1.5rem, calc(50vw - 560px))"};
-  padding-right: #{"max(1.5rem, calc(50vw - 560px))"};
-  margin-top: 1rem;
-  // Extra breathing room below the grey band, before the prev/next pager.
-  margin-bottom: 2.25rem;
-  overflow-x: clip;
-}
 .news-card-grid {
-  margin-top: 0;
+  margin-top: 0.5rem;
 }
 .news-card-col {
   margin-bottom: 1.75rem;
@@ -608,17 +590,18 @@ body.post-modal-lock {
   height: 100%;
   display: flex;
   flex-direction: column;
-  // White card on the grey band, so each post reads as a distinct object.
-  background: #fff;
+  // Light grey card on the white page, so each post reads as a distinct block.
+  // Matches the grey of the home-page hero / Lab Life blocks.
+  background: #f4f4f4;
   border: 1px solid #e7e9ee;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(43, 58, 85, 0.1);
+  box-shadow: 0 4px 14px rgba(43, 58, 85, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .news-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 32px rgba(43, 58, 85, 0.18);
+  box-shadow: 0 12px 26px rgba(43, 58, 85, 0.14);
 }
 .news-card__media {
   display: block;
