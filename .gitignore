@@ -7,6 +7,9 @@ assets/jsconfig.json
 # macOS
 .DS_Store
 
+# Claude Code (machine-local settings)
+.claude/
+
 # Non-web image formats Hugo can't process (would break the gallery build)
 *.heic
 *.HEIC
