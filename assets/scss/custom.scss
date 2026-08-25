@@ -591,7 +591,8 @@ body.post-modal-lock {
   display: flex;
   flex-direction: column;
   // Light grey card on the white page, so each post reads as a distinct block.
-  background: #f4f6f9;
+  // Matches the grey of the home-page hero / Lab Life blocks.
+  background: #f4f4f4;
   border: 1px solid #e7e9ee;
   border-radius: 10px;
   overflow: hidden;
