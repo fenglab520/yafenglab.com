@@ -30,6 +30,14 @@
 // Enlarge the navbar tab links (Home, News, Research, People, Publications, Contact)
 #navbar-main .navbar-nav .nav-link {
   font-size: 0.9rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+// Hover: a soft translucent-teal pill behind the tab (keeps text fully white,
+// overriding the theme's default dim-to-grey hover).
+#navbar-main .navbar-nav .nav-link:hover {
+  background-color: rgba(143, 208, 208, 0.22);
+  color: #ffffff;
 }
 
 // More breathing room between the tab names (desktop horizontal nav only).
@@ -91,6 +99,17 @@ body[data-target="#navbar-main"] #navbar-main .navbar-nav .nav-item:first-child 
 .people-person .portrait-title h2,
 .people-person .portrait-title h2 a {
   font-weight: 400;
+}
+
+// Hover on a member card: the avatar lifts a touch with a soft shadow — a
+// gentle "this opens a profile" cue. (Transforming the avatar, not the card,
+// so it never conflicts with the card's scroll-reveal transform.)
+.people-person .avatar {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.people-person:hover .avatar {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(43, 58, 85, 0.18);
 }
 
 // Previous Members: a two-column ledger — name on the left, role right-aligned,
@@ -234,17 +253,15 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
 }
 
 // Home hero title: navy, centered, medium weight, with a centered accent underline.
-// Stretch the glyphs horizontally (like the Feng Lab logo wordmark) rather than
-// spacing the letters apart.
+// A hair of letter-spacing opens the wordmark up without distorting the Fraunces
+// glyphs (previously a scaleX(1.04) stretch, which subtly widened the letters).
 .hero-title {
   color: #2b3a55;
   font-weight: 400;
   text-align: center;
-  transform: scaleX(1.04);
-  transform-origin: center;
+  letter-spacing: 0.01em;
 }
-// The horizontal stretch can push the title box a few px past the viewport on
-// narrow screens — clip it at the hero section so it never creates page scroll.
+// Belt-and-braces: never let the hero title create horizontal page scroll.
 .home-section.wg-hero {
   overflow-x: clip;
 }
