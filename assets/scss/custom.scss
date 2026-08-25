@@ -297,6 +297,18 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
 .hero-title strong {
   font-weight: 650;
 }
+// Phone-only line break before "Lab" in the hero title, so it drops to its own
+// row (wider phones otherwise keep "Genomics Lab" together). Hidden on
+// tablet/desktop, where the title wraps as before. Bootstrap's sm ceiling keeps
+// this off tablets (>=576px).
+.hero-br-mobile {
+  display: none;
+}
+@media (max-width: 575.98px) {
+  .hero-br-mobile {
+    display: inline;
+  }
+}
 // The horizontal stretch can push the title box a few px past the viewport on
 // narrow screens — clip it at the hero section so it never creates page scroll.
 .home-section.wg-hero {
