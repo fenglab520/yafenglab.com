@@ -175,6 +175,14 @@
 {{/* Modal open/close behaviour (rendered once with the people widget) */}}
 <script>
 (function () {
+  // Hoist every profile modal to <body>. The modals live inside member cards,
+  // and the scroll-reveal briefly applies a `transform` to those cards while
+  // they animate in — a transformed ancestor becomes the containing block for
+  // a position:fixed child, which cropped the modal. At <body> they are always
+  // fixed relative to the viewport.
+  document.querySelectorAll('.person-modal').forEach(function (m) {
+    document.body.appendChild(m);
+  });
   function openModal(id) {
     var m = document.getElementById(id);
     if (!m) return;
