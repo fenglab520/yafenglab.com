@@ -140,19 +140,30 @@
       if (t) warm(t.getAttribute('data-post-modal'));
     }, { passive: true });
   });
+  // Remember the page scroll position so the body-pin scroll-lock (see
+  // .post-modal-lock in custom.scss) can restore it on close.
+  var lockedY = 0;
   function closeAll() {
     document.querySelectorAll('.post-modal.is-open').forEach(function (m) {
       m.classList.remove('is-open');
       m.setAttribute('aria-hidden', 'true');
     });
     document.body.classList.remove('post-modal-lock');
+    document.body.style.top = '';
+    window.scrollTo(0, lockedY);
   }
   document.addEventListener('click', function (e) {
     var t = e.target.closest('.post-modal-trigger');
     if (t) {
       e.preventDefault();
       var m = document.getElementById(t.getAttribute('data-post-modal'));
-      if (m) { m.classList.add('is-open'); m.setAttribute('aria-hidden', 'false'); document.body.classList.add('post-modal-lock'); }
+      if (m) {
+        m.classList.add('is-open');
+        m.setAttribute('aria-hidden', 'false');
+        lockedY = window.scrollY || window.pageYOffset || 0;
+        document.body.style.top = (-lockedY) + 'px';
+        document.body.classList.add('post-modal-lock');
+      }
       return;
     }
     if (e.target.closest('[data-post-modal-close]')) closeAll();

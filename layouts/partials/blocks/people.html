@@ -183,11 +183,16 @@
   document.querySelectorAll('.person-modal').forEach(function (m) {
     document.body.appendChild(m);
   });
+  // Remember the page scroll position so the body-pin scroll-lock (see
+  // .person-modal-lock in custom.scss) can restore it on close.
+  var lockedY = 0;
   function openModal(id) {
     var m = document.getElementById(id);
     if (!m) return;
     m.classList.add('is-open');
     m.setAttribute('aria-hidden', 'false');
+    lockedY = window.scrollY || window.pageYOffset || 0;
+    document.body.style.top = (-lockedY) + 'px';
     document.body.classList.add('person-modal-lock');
   }
   function closeAll() {
@@ -196,6 +201,8 @@
       m.setAttribute('aria-hidden', 'true');
     });
     document.body.classList.remove('person-modal-lock');
+    document.body.style.top = '';
+    window.scrollTo(0, lockedY);
   }
   document.querySelectorAll('.person-modal-trigger').forEach(function (t) {
     t.addEventListener('click', function (e) {

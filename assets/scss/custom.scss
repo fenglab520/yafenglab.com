@@ -348,6 +348,21 @@ body[data-target="#navbar-main"] .home-section.wg-markdown {
 body.person-modal-lock {
   overflow: hidden;
 }
+// iOS Safari ignores `overflow: hidden` on <body>, so the page behind keeps
+// scrolling while a modal is open and the fixed overlay stops covering it,
+// leaving white gaps. Pin the body in place instead; the open/close JS stores
+// and restores the scroll position via body.style.top. Scoped to small screens
+// because desktop already locks fine with overflow:hidden, and body position:
+// fixed there would drop the scrollbar and shift the layout by its width.
+@media (max-width: 768px) {
+  body.person-modal-lock,
+  body.post-modal-lock {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
 .person-modal {
   display: none;
   position: fixed;
