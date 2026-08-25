@@ -17,9 +17,9 @@ marketing:
   seo:
     site_type: Organization
     local_business_type: ''
-    org_name: 'Fenglab'
-    description: 'Yen-Chen Anne Feng'
-    #twitter: 'twitter handle'
+    org_name: 'Feng Lab'
+    description: 'A computational research group at National Taiwan University studying the genetic epidemiology of neuropsychiatric disorders — led by Yen-Chen Anne Feng (馮嬿臻).'
+    twitter: 'AnnejaneF'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
