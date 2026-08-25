@@ -14,12 +14,14 @@
        the change scoped to News). */}}
   {{ $view := $.Params.view | default "compact" }}
   {{ $paginator := .Paginate .Data.Pages 9 }}
-  {{/* The card view renders Bootstrap columns, so wrap them in a grid row. */}}
-  {{ if eq $view "cards" }}<div class="row news-card-grid">{{ end }}
+  {{/* The card view renders Bootstrap columns, so wrap them in a grid row —
+       inside a full-width light-grey band (like the home page grey blocks) so
+       the white cards read as distinct objects on it. */}}
+  {{ if eq $view "cards" }}<div class="news-grid-band"><div class="row news-card-grid">{{ end }}
   {{ range $index, $item := $paginator.Pages }}
     {{ partial "functions/render_view" (dict "page" $ "item" . "view" $view "index" $index) }}
   {{end}}
-  {{ if eq $view "cards" }}</div>{{ end }}
+  {{ if eq $view "cards" }}</div></div>{{ end }}
 
   {{ partial "pagination" . }}
 
