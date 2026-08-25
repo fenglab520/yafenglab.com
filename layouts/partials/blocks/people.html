@@ -71,6 +71,7 @@
         <a href="#" class="person-modal-trigger pm-chip" data-person-modal="{{ $modal_id }}" role="button" aria-haspopup="dialog" aria-label="View profile of {{ .Title }}">
           {{ if $src }}<img class="pm-chip__avatar" src="{{ $src }}" alt="" loading="lazy">{{ end }}
           <span class="pm-chip__name">{{ .Title }}</span>
+          {{ if and $show_role .Params.role }}<span class="pm-chip__role">{{ .Params.role | markdownify | emojify }}</span>{{ end }}
         </a>
 
         {{/* Same pop-up profile as the other members */}}

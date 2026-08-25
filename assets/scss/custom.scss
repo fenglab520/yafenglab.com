@@ -117,27 +117,26 @@ body[data-target="#navbar-main"] #navbar-main .navbar-nav .nav-item:first-child 
   box-shadow: 0 10px 22px rgba(43, 58, 85, 0.18);
 }
 
-// Previous Members: avatar + name "chips" laid out in a three-column grid, names
-// left-aligned. Each chip is clickable and opens the same profile pop-up as the
-// active members. Chips fill their column so the rows line up cleanly.
+// Previous Members: avatar + name "chips" laid out in a two-column grid, with
+// the role right-aligned on the same bar (like the earlier ledger). Each chip is
+// clickable and opens the same profile pop-up as the active members; chips fill
+// their column so the rows line up cleanly.
 .pm-chips {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.7rem 1.2rem;
-  max-width: 860px;
+  max-width: 900px;
   margin: 0 auto;
 }
 .pm-chip {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  min-width: 0; // let the name ellipsize instead of overflowing the chip
+  min-width: 0;
   padding: 0.32rem 0.95rem 0.32rem 0.32rem;
   background: #f4f4f4;
   border-radius: 999px;
   color: #2b3a55;
-  font-weight: 500; // medium ("half-bold")
-  font-size: 0.84rem;
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
@@ -147,22 +146,30 @@ body[data-target="#navbar-main"] #navbar-main .navbar-nav .nav-item:first-child 
 }
 .pm-chip__avatar {
   flex: 0 0 auto;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   object-fit: cover;
 }
 .pm-chip__name {
+  flex: 0 1 auto; // hug the avatar on the left (don't stretch); ellipsize if long
+  min-width: 0;
+  text-align: left;
+  font-weight: 500; // medium ("half-bold")
+  font-size: 0.84rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-// Two columns on tablets, single column on phones.
-@media (max-width: 768px) {
-  .pm-chips {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.pm-chip__role {
+  flex: 0 0 auto;
+  margin-left: auto; // push the role to the right edge of the bar
+  padding-left: 0.75rem; // keep a gap from the name when it runs long
+  color: #5b6675;
+  font-size: 0.66rem;
+  white-space: nowrap;
 }
+// Single column on phones.
 @media (max-width: 480px) {
   .pm-chips {
     grid-template-columns: 1fr;
