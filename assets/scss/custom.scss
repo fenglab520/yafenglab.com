@@ -412,8 +412,13 @@ body.person-modal-lock {
   position: relative;
   width: calc(100% - 2rem);
   max-width: 620px;
+  // dvh (with vh fallback) so the dialog fits the visible viewport on tablet/
+  // phone Safari instead of being cropped at the bottom; identical to vh on
+  // desktop.
   margin: 6vh auto;
+  margin: 6dvh auto;
   max-height: 88vh;
+  max-height: 88dvh;
   overflow-y: auto;
   background: #fff;
   border-radius: 12px;
@@ -529,8 +534,14 @@ body.post-modal-lock {
   position: relative;
   width: calc(100% - 2rem);
   max-width: 720px;
+  // Size to the *visible* viewport with dvh so the dialog isn't cropped at the
+  // bottom on tablet/phone Safari (plain vh refers to the large, toolbar-hidden
+  // viewport). vh first as a fallback for browsers without dvh; on desktop the
+  // two are identical, so nothing changes there.
   margin: 5vh auto;
+  margin: 5dvh auto;
   max-height: 90vh;
+  max-height: 90dvh;
   overflow-y: auto;
   background: #fff;
   border-radius: 12px;
