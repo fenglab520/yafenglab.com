@@ -1,0 +1,22 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+{{/* Local override of Hugo's internal sitemap: exclude the auto-generated
+     taxonomy list + term pages (tags, categories, publication types, author
+     list, and per-co-author pages) so Google isn't pointed at them. Mirrors the
+     noindex rule in partials/seo_tags.html — real lab-member profile pages (term
+     pages backed by a content file) and everything else stay in the sitemap. */}}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {{ range .Data.Pages }}
+    {{- $skip := .Params.private -}}
+    {{- if in (slice "taxonomy" "term") .Kind -}}{{- $skip = true -}}{{- end -}}
+    {{- if and (eq .Kind "page") (in (slice "post" "publication") .Section) -}}{{- $skip = true -}}{{- end -}}
+    {{- if and (eq .Kind "term") .File .Params.user_groups (in .Params.user_groups "Principal Investigator") -}}{{- $skip = false -}}{{- end -}}
+    {{- if and .Permalink (not $skip) -}}
+    <url>
+      <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}
+      <lastmod>{{ safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>{{ end }}{{ with .Sitemap.ChangeFreq }}
+      <changefreq>{{ . }}</changefreq>{{ end }}{{ if ge .Sitemap.Priority 0.0 }}
+      <priority>{{ .Sitemap.Priority }}</priority>{{ end }}
+    </url>
+    {{- end -}}
+  {{ end }}
+</urlset>

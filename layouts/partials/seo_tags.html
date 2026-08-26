@@ -7,8 +7,27 @@
 
 {{ $scr := .Scratch }}
 
-{{/* Request search engines not to index private pages. */}}
-{{ if .Params.private }}
+{{/* Keep Google to the main site pages. noindex:
+     - all auto-generated taxonomy list + term pages (/tags/, /categories/,
+       /authors/, /publication_types/, /tag/…, /publication-type/…, and the
+       per-co-author /author/… pages harvested from publications);
+     - individual news posts and individual publication pages (the /post/ and
+       /publication/ list pages themselves stay indexed);
+     - individual lab-member profile pages — except the PI's.
+     Section index pages (Home, News, Research, People, Publications, Projects,
+     Contact, CV) stay indexed. */}}
+{{ $noindex := .Params.private }}
+{{ if in (slice "taxonomy" "term") .Kind }}
+  {{ $noindex = true }}
+{{ end }}
+{{ if and (eq .Kind "page") (in (slice "post" "publication") .Section) }}
+  {{ $noindex = true }}
+{{ end }}
+{{/* Exception: keep the PI's profile page indexed. */}}
+{{ if and (eq .Kind "term") .File .Params.user_groups (in .Params.user_groups "Principal Investigator") }}
+  {{ $noindex = false }}
+{{ end }}
+{{ if $noindex }}
   <meta name="robots" content="noindex" />
 {{- end -}}
 
