@@ -26,13 +26,13 @@ interests:
 
 education:
   courses:
-    - course: B.S. in Statistics
-      institution: National Chengchi University
-      year: 2021
-      
     - course: M.S. in Biostatistics
       institution: National Taiwan University
       year: 2023
+
+    - course: B.S. in Statistics
+      institution: National Chengchi University
+      year: 2021
 
 social:
     

@@ -117,14 +117,14 @@ body[data-target="#navbar-main"] #navbar-main .navbar-nav .nav-item:first-child 
   box-shadow: 0 10px 22px rgba(43, 58, 85, 0.18);
 }
 
-// Previous Members: avatar + name "chips" laid out in a two-column grid, with
-// the role right-aligned on the same bar (like the earlier ledger). Each chip is
-// clickable and opens the same profile pop-up as the active members; chips fill
-// their column so the rows line up cleanly.
+// Previous Members: avatar + name "chips" with the role right-aligned on the same
+// bar (like the earlier ledger). Laid out in two columns via CSS multi-column so
+// they flow top-to-bottom down the first column, then the second — keeping the
+// position-group order stacked vertically rather than left-right-left-right. Each
+// chip is clickable and opens the same profile pop-up as the active members.
 .pm-chips {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.7rem 1.2rem;
+  columns: 2;
+  column-gap: 1.2rem;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -133,6 +133,9 @@ body[data-target="#navbar-main"] #navbar-main .navbar-nav .nav-item:first-child 
   align-items: center;
   gap: 0.6rem;
   min-width: 0;
+  -webkit-column-break-inside: avoid; // keep each chip whole within a column
+  break-inside: avoid;
+  margin-bottom: 0.7rem; // vertical spacing (multi-column has no grid gap)
   padding: 0.32rem 0.95rem 0.32rem 0.32rem;
   background: #f4f4f4;
   border-radius: 999px;
@@ -172,7 +175,7 @@ body[data-target="#navbar-main"] #navbar-main .navbar-nav .nav-item:first-child 
 // Single column on phones.
 @media (max-width: 480px) {
   .pm-chips {
-    grid-template-columns: 1fr;
+    columns: 1;
   }
 }
 

@@ -39,6 +39,19 @@
     {{ $sort_order := cond $sort_ascending "asc" "desc" }}
     {{ $query = sort $query $sort_by $sort_order }}
 
+    {{/* Previous Members: order by position group rather than family name.
+         Within each group they keep the family-name sort applied just above.
+         Any role not listed falls through to the end so nobody is dropped. */}}
+    {{ if $is_previous }}
+      {{ $role_order := slice "RA & Master's Student" "Research Assistant" "Master's Student" "Master's Student (co-advised)" "Undergraduate Student" }}
+      {{ $ordered := slice }}
+      {{ range $role_order }}
+        {{ $ordered = $ordered | append (where $query "Params.role" .) }}
+      {{ end }}
+      {{ $ordered = $ordered | append (where $query "Params.role" "not in" $role_order) }}
+      {{ $query = $ordered }}
+    {{ end }}
+
     {{if $query | and (gt (len $block.content.user_groups) 1) }}
       <div class="col-md-12 people-group-heading">
         <h2 class="mb-4">{{ $group | markdownify }}</h2>

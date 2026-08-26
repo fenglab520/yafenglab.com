@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position: 
-role: Research Assistant
+role: RA & Master's Student
 # Organizations/Affiliations
 organizations:
   - name: National Taiwan University
