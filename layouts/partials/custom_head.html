@@ -1,8 +1,11 @@
 <meta name="google-site-verification" content="uGDQKXeCmHv2tcsG8cN6xslpv9Bmn-CP9XU5WBCy7yY">
 
-{{/* Root favicon.ico (16+32 px) for browsers/bookmarks/history that request
-     /favicon.ico directly, alongside the theme's PNG <link rel=icon>. */}}
+{{/* Favicons. Root /favicon.ico (16/32/48) for browsers/bookmarks/history that
+     request it directly; larger PNGs so Google Search has a >=48px square icon
+     to display (it ignores sub-48px favicons and falls back to a globe). */}}
 <link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
 
 {{/* Person structured data (schema.org JSON-LD) for the PI.
      Emitted only on the PI's profile page so it describes that page's subject.
