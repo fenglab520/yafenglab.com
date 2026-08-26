@@ -9,6 +9,7 @@
     {{- $skip := .Params.private -}}
     {{- if in (slice "taxonomy" "term") .Kind -}}{{- $skip = true -}}{{- end -}}
     {{- if and (eq .Kind "page") (in (slice "post" "publication") .Section) -}}{{- $skip = true -}}{{- end -}}
+    {{- if eq .Section "projects" -}}{{- $skip = true -}}{{- end -}}
     {{- if and (eq .Kind "term") .File .Params.user_groups (in .Params.user_groups "Principal Investigator") -}}{{- $skip = false -}}{{- end -}}
     {{- if and .Permalink (not $skip) -}}
     <url>

@@ -23,6 +23,10 @@
 {{ if and (eq .Kind "page") (in (slice "post" "publication") .Section) }}
   {{ $noindex = true }}
 {{ end }}
+{{/* Projects are not in the nav — noindex the whole section (list + items). */}}
+{{ if eq .Section "projects" }}
+  {{ $noindex = true }}
+{{ end }}
 {{/* Exception: keep the PI's profile page indexed. */}}
 {{ if and (eq .Kind "term") .File .Params.user_groups (in .Params.user_groups "Principal Investigator") }}
   {{ $noindex = false }}
