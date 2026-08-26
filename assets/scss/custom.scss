@@ -298,15 +298,15 @@ body[data-target="#TableOfContents"] .universal-wrapper:not(.pt-3) {
   font-weight: 650;
 }
 // Phone-only line break before "Lab" in the hero title, so it drops to its own
-// row (wider phones otherwise keep "Genomics Lab" together). Hidden on
-// tablet/desktop, where the title wraps as before. Bootstrap's sm ceiling keeps
-// this off tablets (>=576px).
-.hero-br-mobile {
-  display: none;
-}
+// row (wider phones otherwise keep "Genomics Lab" together). "Lab" is wrapped in
+// an inline span that stays inline (with its preceding space intact) on
+// tablet/desktop, and becomes a block — its own centered line — on phones.
+// Bootstrap's sm ceiling keeps this off tablets (>=576px). (Using a span rather
+// than a <br>: HTML minification strips the space before a hidden <br>, which
+// glued "GenomicsLab" together on desktop.)
 @media (max-width: 575.98px) {
-  .hero-br-mobile {
-    display: inline;
+  .hero-title .hero-lab {
+    display: block;
   }
 }
 // The horizontal stretch can push the title box a few px past the viewport on
