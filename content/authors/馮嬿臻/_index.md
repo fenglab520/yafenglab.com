@@ -25,7 +25,6 @@ interests:
     - Statistical genetics
     - Neuropsychiatric diseases
 
-
 education:
   courses:
     - course: Sc.D. Epidemiology (Program in Genetic Epidemiology and Statistical Genetics)

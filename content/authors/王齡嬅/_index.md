@@ -28,7 +28,6 @@ interests:
     - Statistical genetics
     - Neuropsychiatric diseases
 
-
 education:
   courses:
     - course: M.S. Epidemiology and Preventive Medicine
