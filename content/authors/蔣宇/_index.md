@@ -21,6 +21,11 @@ organizations:
   - name: National Taiwan University
     url: ''
 
+education:
+  courses:
+    - course: B.S. in Teaching Chinese as a Second Language
+      institution: Chung Yuan Christian University
+
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
 user_groups:
   - Graduate Student
