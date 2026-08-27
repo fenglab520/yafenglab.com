@@ -57,9 +57,12 @@
       {{ $query = $ordered }}
     {{ end }}
 
+    {{/* Display heading: show "Lab Alumni" for the Previous Members group while
+         keeping the internal group name (used for detection + author tagging). */}}
+    {{ $group_title := cond $is_previous "Lab Alumni" $group }}
     {{if $query | and (gt (len $block.content.user_groups) 1) }}
       <div class="col-md-12 people-group-heading">
-        <h2 class="mb-4">{{ $group | markdownify }}</h2>
+        <h2 class="mb-4">{{ $group_title | markdownify }}</h2>
       </div>
     {{end}}
 
