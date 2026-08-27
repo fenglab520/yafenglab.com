@@ -21,12 +21,23 @@ organizations:
   - name: National Taiwan University
     url: ''
 
+interests:
+    - Sociogenomics
+    - Causal inference
+    - Psychiatric epidemiology
+
 education:
   courses:
-    - course: B.S. in Teaching Chinese as a Second Language
+    - course: M.A. in Education
+      institution: University College London
+      year: 2024
+    - course: B.A. in Teaching Chinese as a Second Language
       institution: Chung Yuan Christian University
+      year: 2023
 
 # Please copy&paste 大小寫一定要一樣: Graduate student/Administration/Alumni
 user_groups:
   - Graduate Student
 ---
+
+Hi! I'm Jerry. I moved into genetic epidemiology from a background in education and the humanities. I'm currently working with Mendelian Randomization and polygenic scores to understand how genetic and social factors jointly shape mental health. Outside research, I enjoy listening to music and visiting exhibitions.
