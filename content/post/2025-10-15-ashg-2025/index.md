@@ -8,4 +8,6 @@ authors:
 "You're not just part of the sequence; You complete it."
 <!--more-->
 
+Attending ASHG this year as a group of four—proud of all the grad students for their hard work and growth.
+
 ![image](posters.jpg)
