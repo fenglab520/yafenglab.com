@@ -50,6 +50,29 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      # --- Auto-generate the social-share (OG) card from the current homepage ---
+      # Build a localhost copy (so its assets resolve locally), screenshot the
+      # homepage at 1200x630, and write it to assets/media/sharing.png. The real
+      # build below then picks it up as og:image. Both steps are non-fatal: if
+      # anything fails, the committed assets/media/sharing.png is used instead, so
+      # a deploy never breaks over the screenshot.
+      - name: Build homepage copy for the OG snapshot
+        continue-on-error: true
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+        run: hugo --baseURL "http://localhost:8080/" -d /tmp/ogshot
+      - name: Regenerate the OG card from the current homepage
+        continue-on-error: true
+        run: |
+          (cd /tmp/ogshot && python3 -m http.server 8080 >/dev/null 2>&1 &)
+          for i in $(seq 1 15); do curl -sf -o /dev/null http://localhost:8080/ && break; sleep 1; done
+          google-chrome --headless=new --no-sandbox --disable-gpu --hide-scrollbars \
+            --force-device-scale-factor=2 --window-size=1200,630 \
+            --virtual-time-budget=12000 \
+            --screenshot=/tmp/og-2x.png "http://localhost:8080/"
+          convert /tmp/og-2x.png -resize 1200x630 assets/media/sharing.png
+          echo "OG card regenerated:"; identify assets/media/sharing.png || true
+      # --------------------------------------------------------------------------
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
@@ -59,7 +82,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"          
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
