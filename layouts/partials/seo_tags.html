@@ -86,9 +86,17 @@
 {{ $theme_color := ($scr.Get "primary") | default site.Params.appearance.primary_color | default "#fff" }}
 <meta name="theme-color" content="{{ $theme_color }}" />
 
-{{/* Local override: no social-share image — keep previews text-only. */}}
+{{/* Social-share image: the current homepage snapshot at assets/media/sharing.png.
+     That file is regenerated on every deploy by the CI screenshot step (see
+     .github/workflows/hugo.yml), and the committed copy is the fallback — so the
+     card always reflects a recent look of the homepage. If the file is ever
+     missing, previews fall back to text-only. */}}
 {{ $og_image := "" }}
 {{ $twitter_card := "summary" }}
+{{ with resources.GetMatch "media/sharing.*" }}
+  {{ $og_image = .Permalink }}
+  {{ $twitter_card = "summary_large_image" }}
+{{ end }}
 {{ $scr.Set "og_image" $og_image }}{{/* Set `og_image` globally for `rss.xml`. */}}
 
 {{ $title := partial "blox-core/functions/get_page_title" . }}
