@@ -9,5 +9,3 @@ Proud of Yi-Syuan Ke for delivering a talk on our work dissecting depression het
 <!--more-->
 
 ![image](eshg_all.jpg)
-
-![image](IMG_3307.jpg)
