@@ -31,7 +31,12 @@
 #navbar-main .navbar-nav .nav-link {
   font-size: 0.9rem;
   border-radius: 6px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  // Keep the hover crisp. A fade let the teal background linger as it faded out,
+  // so sweeping the cursor toward a tab lit up a trail of pills on the tabs
+  // passed over — reading as a flash/jump. The background is now instant (it is
+  // deliberately left out of the transition below), and the text colour uses a
+  // quick fade instead of the theme's slow 0.6s, so no lingering trail.
+  transition: color 0.12s ease;
 }
 // Hover: a soft translucent-teal pill behind the tab (keeps text fully white,
 // overriding the theme's default dim-to-grey hover).
