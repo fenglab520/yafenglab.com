@@ -7,3 +7,5 @@ authors:
 ---
 Wishing Ke all the best as she starts her PhD journey at Aarhus University in Denmark!
 <!--more-->
+
+![image](IMG_2964.jpg)
