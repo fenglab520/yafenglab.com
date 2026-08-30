@@ -21,6 +21,11 @@ organizations:
   - name: National Taiwan University
     url: ''
 
+interests:
+    - Statistical genetics
+    - Genetic epidemiology
+    - Neuropsychiatric diseases
+
 education:
   courses:
     - course: B.S. in Statistics
@@ -31,3 +36,5 @@ education:
 user_groups:
   - Graduate Student
 ---
+
+Hi! I'm Marian. I have a background in biostatistics and am currently dedicated to researching genetic diseases. Outside of my research, my passions include playing badminton and exploring the science of baking.
