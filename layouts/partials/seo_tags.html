@@ -83,8 +83,11 @@
 {{/* Progressive Web App (PWA) Icon */}}
 <link rel="icon" type="image/png" href="{{ (partial "blox-core/functions/get_icon" 32).RelPermalink }}" />
 <link rel="apple-touch-icon" type="image/png" href="{{ (partial "blox-core/functions/get_icon" 180).RelPermalink }}" />
-{{ $theme_color := ($scr.Get "primary") | default site.Params.appearance.primary_color | default "#fff" }}
-<meta name="theme-color" content="{{ $theme_color }}" />
+{{/* theme-color drives Safari's toolbar + overscroll (rubber-band) tint and the
+     mobile browser chrome. Upstream derives it from `primary` (#2962ff), which
+     made Safari flash bright blue when you scrolled past the top/bottom. Use the
+     navbar/footer navy instead so the overscroll blends with those dark bars. */}}
+<meta name="theme-color" content="#2b3a55" />
 
 {{/* Social-share image: the current homepage snapshot at assets/media/sharing.png.
      That file is regenerated on every deploy by the CI screenshot step (see
